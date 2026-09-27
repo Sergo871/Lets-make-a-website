@@ -3,24 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Кафе «Авеню» — Бендеры</title>
-<meta name="description" content="Кафе «Авеню» в Бендерах: завтраки, кухня, десерты, кофе и коктейли. Ежедневно 10:00–00:00. ул. Ленина 20а. Тел. +373 552 78 887.">
-<meta property="og:title" content="Кафе «Авеню» — Бендеры">
-<meta property="og:description" content="Завтраки, кухня, десерты и коктейли. Ежедневно 10:00–00:00.">
-<meta property="og:image" content="img/hero.webp">
-<meta name="theme-color" content="#1c1410">
+<title>Кафе-бар «Авеню» — Бендеры</title>
+<meta name="description" content="Кафе-бар «Авеню» в центре Бендер: европейская, японская и национальная кухня, пицца, суши, живая музыка, летняя терраса, банкеты и доставка. Ежедневно 10:00–00:00. ул. Ленина 20А.">
+<meta property="og:title" content="Кафе-бар «Авеню» — Бендеры">
+<meta property="og:description" content="Пицца, суши, европейская кухня, живая музыка и банкеты. Ежедневно 10:00–00:00.">
+<meta property="og:image" content="img/real-exterior.webp">
+<meta name="theme-color" content="#141212">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="img/hero.webp">
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "CafeOrCoffeeShop",
-  "name": "Кафе «Авеню»",
-  "image": "img/hero.webp",
+  "@type": "Restaurant",
+  "name": "Кафе-бар «Авеню»",
+  "image": "img/real-exterior.webp",
+  "servesCuisine": ["Европейская", "Японская", "Национальная"],
   "telephone": "+37355278887",
-  "address": {"@type": "PostalAddress", "streetAddress": "ул. Ленина 20а", "addressLocality": "Бендеры", "addressCountry": "MD"},
+  "address": {"@type": "PostalAddress", "streetAddress": "ул. Ленина 20А", "addressLocality": "Бендеры", "addressCountry": "MD"},
   "geo": {"@type": "GeoCoordinates", "latitude": 46.8228172, "longitude": 29.4820508},
   "openingHours": "Mo-Su 10:00-24:00",
   "sameAs": ["https://www.instagram.com/avenue_bendery/"]
@@ -28,20 +28,21 @@
 </script>
 <style>
 :root{
-  --color-primary:#92400E;
-  --color-primary-hover:#7a350b;
+  --color-primary:#C8102E;
+  --color-primary-hover:#a50d26;
   --color-on-primary:#fff;
-  --color-accent:#D9A35B;
-  --color-background:#FBF6EE;
+  --color-primary-soft:#fde8eb;
+  --color-background:#faf7f5;
   --color-surface:#fff;
-  --color-foreground:#2a1a10;
-  --color-muted-foreground:#6b5646;
-  --color-border:#eadfce;
-  --color-dark:#1c1410;
-  --color-on-dark:#f6ede1;
-  --color-on-dark-muted:#cdbba6;
+  --color-foreground:#1a1414;
+  --color-muted-foreground:#5f5555;
+  --color-border:#eee4e1;
+  --color-dark:#141212;
+  --color-on-dark:#f7f2ef;
+  --color-on-dark-muted:#c4b8b4;
+  --color-red-on-dark:#ff5a6e;
   --radius:16px;
-  --shadow:0 10px 30px -12px rgba(60,30,10,.25);
+  --shadow:0 12px 32px -14px rgba(40,10,10,.28);
   --font-head:"Playfair Display",Georgia,serif;
   --font-body:"Karla",system-ui,-apple-system,sans-serif;
   --space-section:clamp(64px,10vw,120px);
@@ -52,150 +53,170 @@ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--color-background);color:var(--color-foreground);font:400 17px/1.6 var(--font-body);overflow-x:hidden}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit}
-h1,h2,h3{font-family:var(--font-head);font-weight:700;line-height:1.15;margin:0;text-wrap:balance}
+h1,h2,h3{font-family:var(--font-head);font-weight:800;line-height:1.12;margin:0;text-wrap:balance}
 p{margin:0}
 .container{width:min(1160px,100% - 32px);margin-inline:auto}
 .skip{position:absolute;left:-999px;top:8px;background:var(--color-primary);color:#fff;padding:10px 16px;border-radius:8px;z-index:100}
 .skip:focus{left:8px}
-:focus-visible{outline:3px solid var(--color-accent);outline-offset:3px;border-radius:6px}
+:focus-visible{outline:3px solid var(--color-red-on-dark);outline-offset:3px;border-radius:6px}
 .icon{width:20px;height:20px;flex:none;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
 /* Buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 22px;border-radius:999px;font:600 16px/1 var(--font-body);text-decoration:none;cursor:pointer;border:2px solid transparent;transition:background-color .2s var(--ease),color .2s var(--ease),border-color .2s var(--ease),transform .2s var(--ease)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 22px;border-radius:999px;font:700 16px/1 var(--font-body);text-decoration:none;cursor:pointer;border:2px solid transparent;transition:background-color .2s var(--ease),color .2s var(--ease),border-color .2s var(--ease),transform .2s var(--ease)}
 .btn:active{transform:scale(.97)}
-.btn-primary{background:var(--color-accent);color:var(--color-dark)}
-.btn-primary:hover{background:#e6b674}
-.btn-ghost{border-color:rgba(246,237,225,.55);color:var(--color-on-dark)}
-.btn-ghost:hover{background:rgba(246,237,225,.12)}
-.btn-dark{background:var(--color-primary);color:var(--color-on-primary)}
-.btn-dark:hover{background:var(--color-primary-hover)}
+.btn-primary{background:var(--color-primary);color:var(--color-on-primary)}
+.btn-primary:hover{background:var(--color-primary-hover)}
+.btn-ghost{border-color:rgba(247,242,239,.55);color:var(--color-on-dark)}
+.btn-ghost:hover{background:rgba(247,242,239,.12)}
 
 /* Header */
 .header{position:fixed;inset:0 0 auto;z-index:50;transition:background-color .3s var(--ease),box-shadow .3s var(--ease)}
-.header.scrolled{background:rgba(28,20,16,.92);backdrop-filter:blur(10px);box-shadow:0 4px 20px rgba(0,0,0,.2)}
+.header.scrolled{background:rgba(20,18,18,.94);backdrop-filter:blur(10px);box-shadow:0 4px 20px rgba(0,0,0,.25)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
-.logo{font:700 26px/1 var(--font-head);color:var(--color-on-dark);text-decoration:none;letter-spacing:.02em}
-.logo span{color:var(--color-accent);font-style:italic;font-weight:500}
+.logo{display:inline-flex;align-items:center;gap:10px;font:800 24px/1 var(--font-head);color:var(--color-on-dark);text-decoration:none;letter-spacing:.01em}
+.logo-mark{width:34px;height:34px;border-radius:50%;background:var(--color-primary);display:grid;place-items:center;flex:none}
+.logo-mark svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap:round}
 .nav{display:none;gap:28px}
-.nav a{color:var(--color-on-dark);text-decoration:none;font-weight:500;padding:8px 0;position:relative}
-.nav a::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:2px;background:var(--color-accent);transform:scaleX(0);transition:transform .25s var(--ease)}
+.nav a{color:var(--color-on-dark);text-decoration:none;font-weight:600;padding:8px 0;position:relative}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:2px;background:var(--color-primary);transform:scaleX(0);transition:transform .25s var(--ease)}
 .nav a:hover::after{transform:scaleX(1)}
 .header-actions{display:flex;align-items:center;gap:8px}
-.lang{display:flex;border:1px solid rgba(246,237,225,.35);border-radius:999px;padding:3px}
-.lang button{min-width:44px;min-height:38px;border:0;border-radius:999px;background:transparent;color:var(--color-on-dark);font:600 14px var(--font-body);cursor:pointer;transition:background-color .2s}
-.lang button[aria-pressed="true"]{background:var(--color-accent);color:var(--color-dark)}
+.lang{display:flex;border:1px solid rgba(247,242,239,.35);border-radius:999px;padding:3px}
+.lang button{min-width:44px;min-height:38px;border:0;border-radius:999px;background:transparent;color:var(--color-on-dark);font:700 14px var(--font-body);cursor:pointer;transition:background-color .2s}
+.lang button[aria-pressed="true"]{background:var(--color-primary);color:#fff}
 .header .btn{display:none;min-height:44px;padding:10px 18px}
-@media (min-width:900px){.nav{display:flex}.header .btn{display:inline-flex}}
+@media (min-width:960px){.nav{display:flex}.header .btn{display:inline-flex}}
 
 /* Hero */
 .hero{position:relative;min-height:100svh;display:grid;align-items:end;color:var(--color-on-dark);background:var(--color-dark);isolation:isolate}
-.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
-.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(20,13,9,.55) 0%,rgba(20,13,9,.35) 40%,rgba(20,13,9,.92) 100%)}
-.hero-content{padding:140px 0 clamp(96px,14vh,140px)}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-accent)}
-.hero h1{font-size:clamp(46px,9vw,96px);margin:14px 0 18px;letter-spacing:-.01em}
-.hero h1 em{color:var(--color-accent);font-weight:500}
-.hero p.lead{font-size:clamp(18px,2.2vw,21px);max-width:560px;color:var(--color-on-dark-muted)}
+.hero picture,.hero img{position:absolute;inset:0;width:100%;height:100%}
+.hero img{object-fit:cover;z-index:-2}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(15,12,12,.7) 0%,rgba(15,12,12,.72) 40%,rgba(15,12,12,.96) 100%)}
+@media (min-width:701px){.hero::before{background:linear-gradient(90deg,rgba(15,12,12,.85) 0%,rgba(15,12,12,.55) 55%,rgba(15,12,12,.15) 100%),linear-gradient(180deg,rgba(15,12,12,.5) 0%,transparent 30%,rgba(15,12,12,.9) 100%)}}
+.hero-content{padding:140px 0 clamp(104px,14vh,140px)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--color-primary)}
+.eyebrow::before{content:"";width:28px;height:2px;background:currentColor}
+.hero .eyebrow,.dark-section .eyebrow,.events .eyebrow{color:var(--color-red-on-dark)}
+.hero h1{font-size:clamp(48px,9.5vw,104px);margin:16px 0 18px;letter-spacing:-.01em}
+.hero h1 em{color:var(--color-red-on-dark);font-style:italic;font-weight:600}
+.hero p.lead{font-size:clamp(18px,2.2vw,21px);max-width:580px;color:var(--color-on-dark-muted)}
 .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
-.open-badge{display:inline-flex;align-items:center;gap:10px;margin-top:28px;font-size:15px;color:var(--color-on-dark-muted)}
-.dot{width:10px;height:10px;border-radius:50%;background:#9ca3af;box-shadow:0 0 0 4px rgba(156,163,175,.25)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(247,242,239,.1);border:1px solid rgba(247,242,239,.18);font-size:14px;font-weight:600}
+.chip .icon{width:16px;height:16px;fill:#f5a524;stroke:none}
+.dot{width:9px;height:9px;border-radius:50%;background:#9ca3af}
 .dot.on{background:#4ade80;box-shadow:0 0 0 4px rgba(74,222,128,.25)}
 
 /* Sections */
 section{scroll-margin-top:68px}
 .section{padding-block:var(--space-section)}
-.section-head{max-width:640px;margin-bottom:48px}
-.section-head h2{font-size:clamp(34px,5vw,52px);margin:10px 0 14px}
+.section.flush{padding-top:0}
+.section-head{max-width:660px;margin-bottom:48px}
+.section-head h2{font-size:clamp(34px,5vw,54px);margin:12px 0 14px}
 .section-head p{color:var(--color-muted-foreground);font-size:18px}
-.eyebrow.dark{color:var(--color-primary)}
+.dark-section{background:var(--color-dark);color:var(--color-on-dark)}
+.dark-section .section-head p{color:var(--color-on-dark-muted)}
 
-/* Features */
-.features{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
-.feature{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius);padding:28px;transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
-.feature:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-.feature .ico{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:#f7ead6;color:var(--color-primary);margin-bottom:18px}
-.feature .ico .icon{width:26px;height:26px}
-.feature h3{font-size:22px;margin-bottom:8px}
-.feature p{color:var(--color-muted-foreground)}
-
-/* About split */
+/* About */
 .about{display:grid;gap:40px;align-items:center}
+.about .section-head{margin-bottom:0}
+.about-media{position:relative}
 .about-img{border-radius:24px;overflow:hidden;aspect-ratio:4/3;box-shadow:var(--shadow)}
 .about-img img{width:100%;height:100%;object-fit:cover}
-.stats{display:flex;flex-wrap:wrap;gap:32px;margin-top:32px}
-.stat strong{display:block;font:700 40px/1 var(--font-head);color:var(--color-primary)}
-.stat span{color:var(--color-muted-foreground);font-size:15px}
-@media (min-width:900px){.about{grid-template-columns:1.05fr 1fr;gap:72px}}
+.about-badge{position:absolute;right:-8px;bottom:-24px;width:112px;height:112px;border-radius:50%;overflow:hidden;border:5px solid var(--color-background);box-shadow:var(--shadow)}
+.about-badge img{width:100%;height:100%;object-fit:cover}
+.stats{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:12px 36px;margin-top:32px}
+.stat strong{display:block;font:800 38px/1 var(--font-head);color:var(--color-primary)}
+.stat span{color:var(--color-muted-foreground);font-size:14px}
+@media (min-width:960px){.about{grid-template-columns:1fr 1.05fr;gap:72px}.about-badge{right:-28px;width:132px;height:132px}}
+
+/* Features */
+.features{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:80px}
+@media (min-width:960px){.features{grid-template-columns:repeat(3,1fr)}}
+.feature{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius);padding:26px;transition:transform .25s var(--ease),box-shadow .25s var(--ease),border-color .25s}
+.feature:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#f3c9d0}
+.feature .ico{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;background:var(--color-primary-soft);color:var(--color-primary);margin-bottom:16px}
+.feature .ico .icon{width:25px;height:25px}
+.feature h3{font-size:21px;margin-bottom:6px}
+.feature p{color:var(--color-muted-foreground);font-size:16px}
 
 /* Menu */
-.menu-section{background:var(--color-dark);color:var(--color-on-dark)}
-.menu-section .section-head p{color:var(--color-on-dark-muted)}
-.menu-section .eyebrow{color:var(--color-accent)}
 .tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:36px;scrollbar-width:none}
 .tabs::-webkit-scrollbar{display:none}
-.tab{flex:none;min-height:46px;padding:10px 20px;border-radius:999px;border:1px solid rgba(246,237,225,.25);background:transparent;color:var(--color-on-dark);font:600 15px var(--font-body);cursor:pointer;transition:background-color .2s,color .2s,border-color .2s}
-.tab:hover{border-color:var(--color-accent)}
-.tab[aria-selected="true"]{background:var(--color-accent);border-color:var(--color-accent);color:var(--color-dark)}
-.menu-panel{display:grid;gap:24px}
+.tab{flex:none;min-height:46px;padding:10px 20px;border-radius:999px;border:1px solid rgba(247,242,239,.25);background:transparent;color:var(--color-on-dark);font:700 15px var(--font-body);cursor:pointer;transition:background-color .2s,color .2s,border-color .2s}
+.tab:hover{border-color:var(--color-red-on-dark)}
+.tab[aria-selected="true"]{background:var(--color-primary);border-color:var(--color-primary);color:#fff}
+.menu-panel{display:grid;gap:28px}
 .menu-panel[hidden]{display:none}
-@media (min-width:900px){.menu-panel{grid-template-columns:380px 1fr;gap:56px;align-items:start}}
+@media (min-width:960px){.menu-panel{grid-template-columns:400px 1fr;gap:56px;align-items:start}}
 .menu-photo{border-radius:20px;overflow:hidden;aspect-ratio:4/3}
 .menu-photo img{width:100%;height:100%;object-fit:cover}
 .menu-list{list-style:none;margin:0;padding:0}
-.menu-list li{padding:18px 0;border-bottom:1px dashed rgba(246,237,225,.2)}
+.menu-list li{padding:18px 0;border-bottom:1px dashed rgba(247,242,239,.2)}
 .menu-list li:first-child{padding-top:0}
-.menu-list h3{font-size:21px;font-weight:500}
+.menu-list h3{font-size:21px;font-weight:600}
 .menu-list p{color:var(--color-on-dark-muted);font-size:15px;margin-top:4px}
-.menu-note{margin-top:32px;display:flex;flex-wrap:wrap;align-items:center;gap:16px;color:var(--color-on-dark-muted)}
+.menu-note{margin-top:36px;display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+
+/* Events band */
+.events{position:relative;border-radius:28px;overflow:hidden;color:var(--color-on-dark);isolation:isolate;padding:clamp(32px,6vw,72px)}
+.events>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.events::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(20,10,10,.92) 0%,rgba(20,10,10,.78) 55%,rgba(120,10,28,.55) 100%)}
+.events h2{font-size:clamp(32px,4.6vw,50px);max-width:620px;margin:12px 0 16px}
+.events p{max-width:560px;color:var(--color-on-dark-muted);font-size:18px}
+.events ul{list-style:none;padding:0;margin:24px 0 32px;display:flex;flex-wrap:wrap;gap:10px}
+.events li{padding:8px 16px;border-radius:999px;background:rgba(247,242,239,.12);border:1px solid rgba(247,242,239,.2);font-weight:600;font-size:15px}
 
 /* Gallery */
-.gallery{display:grid;grid-auto-flow:dense;gap:12px;grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}
-.gallery figure{margin:0;border-radius:14px;overflow:hidden;background:#eadfce}
+.gallery{display:grid;grid-auto-flow:dense;gap:12px;grid-template-columns:repeat(2,1fr);grid-auto-rows:170px}
+.gallery figure{margin:0;border-radius:14px;overflow:hidden;background:#eee4e1}
 .gallery img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
 .gallery figure:hover img{transform:scale(1.05)}
 .gallery .tall{grid-row:span 2}
 .gallery .wide{grid-column:span 2}
-.gallery .big{grid-column:span 2;grid-row:span 2}
 @media (min-width:768px){.gallery{grid-template-columns:repeat(4,1fr);grid-auto-rows:220px}}
 
 /* Reviews */
-.reviews{display:grid;gap:24px;align-items:center;background:var(--color-surface);border:1px solid var(--color-border);border-radius:24px;padding:clamp(28px,5vw,56px)}
-.reviews .big{font:700 clamp(56px,9vw,88px)/1 var(--font-head);color:var(--color-primary)}
-.reviews h2{font-size:clamp(28px,4vw,40px);margin-bottom:10px}
-.reviews p{color:var(--color-muted-foreground)}
-.stars{display:flex;gap:4px;color:var(--color-accent);margin:10px 0}
-.stars svg{width:22px;height:22px;fill:currentColor}
-@media (min-width:900px){.reviews{grid-template-columns:auto 1fr auto;gap:48px}}
+.ratings{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-bottom:24px}
+.rating{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius);padding:24px;text-decoration:none;display:block;transition:border-color .2s,box-shadow .2s}
+.rating:hover{border-color:#f3c9d0;box-shadow:var(--shadow)}
+.rating strong{display:block;font:800 40px/1 var(--font-head);color:var(--color-primary)}
+.rating span{display:block;margin-top:6px;color:var(--color-muted-foreground);font-size:15px}
+.quotes{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.quote{margin:0;background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;gap:16px}
+.stars{display:flex;gap:3px;color:#f5a524}
+.stars svg{width:18px;height:18px;fill:currentColor}
+.quote blockquote{margin:0;font-size:17px}
+.quote figcaption{margin-top:auto;color:var(--color-muted-foreground);font-size:14px}
 
 /* Contact */
-.contact{display:grid;gap:32px}
-@media (min-width:900px){.contact{grid-template-columns:1fr 1.2fr;gap:48px}}
+.contact{display:grid;gap:24px}
+@media (min-width:960px){.contact{grid-template-columns:1fr 1.2fr;gap:40px}}
 .info-card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:24px;padding:32px;display:grid;gap:24px}
 .info-row{display:flex;gap:16px}
-.info-row .icon{width:24px;height:24px;color:var(--color-primary);margin-top:3px}
-.info-row h3{font:600 14px var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--color-muted-foreground);margin-bottom:4px}
-.info-row a{text-decoration:none;font-weight:600}
+.info-row>.icon{width:24px;height:24px;color:var(--color-primary);margin-top:3px}
+.info-row h3{font:700 13px var(--font-body);letter-spacing:.14em;text-transform:uppercase;color:var(--color-muted-foreground);margin-bottom:4px}
+.info-row a{text-decoration:none;font-weight:700}
 .info-row a:hover{color:var(--color-primary);text-decoration:underline}
 .hours{list-style:none;margin:0;padding:0;display:grid;gap:4px}
 .hours li{display:flex;justify-content:space-between;gap:16px}
 .hours li.today{font-weight:700;color:var(--color-primary)}
-.map{border-radius:24px;overflow:hidden;min-height:360px;border:1px solid var(--color-border);background:#eadfce}
-.map iframe{width:100%;height:100%;min-height:360px;border:0;display:block}
+.map{border-radius:24px;overflow:hidden;min-height:380px;border:1px solid var(--color-border);background:#eee4e1}
+.map iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
 
 /* Footer */
-.footer{background:var(--color-dark);color:var(--color-on-dark-muted);padding:48px 0 120px;font-size:15px}
+.footer{background:var(--color-dark);color:var(--color-on-dark-muted);padding:48px 0 120px;font-size:15px;border-top:4px solid var(--color-primary)}
 .footer-inner{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center}
 .footer a{color:var(--color-on-dark);text-decoration:none}
-.footer a:hover{color:var(--color-accent)}
 .social{display:flex;gap:10px}
-.social a{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(246,237,225,.25);transition:border-color .2s,color .2s}
-.social a:hover{border-color:var(--color-accent)}
-@media (min-width:900px){.footer{padding-bottom:48px}}
+.social a{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(247,242,239,.25);transition:border-color .2s,background-color .2s}
+.social a:hover{border-color:var(--color-primary);background:var(--color-primary)}
+@media (min-width:960px){.footer{padding-bottom:48px}}
 
 /* Mobile action bar */
-.action-bar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(28,20,16,.95);backdrop-filter:blur(10px);border-top:1px solid rgba(246,237,225,.12)}
+.action-bar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(20,18,18,.96);backdrop-filter:blur(10px);border-top:1px solid rgba(247,242,239,.12)}
 .action-bar .btn{min-height:50px;padding:10px}
-@media (min-width:900px){.action-bar{display:none}}
+@media (min-width:960px){.action-bar{display:none}}
 
 /* Reveal */
 .js .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
@@ -212,10 +233,13 @@ section{scroll-margin-top:68px}
   <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
   <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
   <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
-  <symbol id="i-coffee" viewBox="0 0 24 24"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><path d="M6 2v2M10 2v2M14 2v2"/></symbol>
-  <symbol id="i-egg" viewBox="0 0 24 24"><path d="M12 22c6.2 0 8-4 8-8.5C20 8 16.4 2 12 2S4 8 4 13.5C4 18 5.8 22 12 22z"/></symbol>
   <symbol id="i-utensils" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></symbol>
-  <symbol id="i-wine" viewBox="0 0 24 24"><path d="M8 22h8M7 10h10M12 15v7M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z"/></symbol>
+  <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2M15 18H9M19 18h2a1 1 0 0 0 1-1v-3.6a1 1 0 0 0-.2-.6l-3.5-4.4A1 1 0 0 0 17.5 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol>
+  <symbol id="i-baby" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9 12h.01M15 12h.01M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"/></symbol>
+  <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M12 20h.01M2 8.8a15 15 0 0 1 20 0M5 12.9a10 10 0 0 1 14 0M8.5 16.4a5 5 0 0 1 7 0"/></symbol>
   <symbol id="i-insta" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></symbol>
   <symbol id="i-nav" viewBox="0 0 24 24"><path d="m3 11 19-9-9 19-2-8-8-2z"/></symbol>
   <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></symbol>
@@ -226,11 +250,15 @@ section{scroll-margin-top:68px}
 
 <header class="header" id="header">
   <div class="container header-inner">
-    <a class="logo" href="#top" aria-label="Авеню — на главную">Avenue<span>.</span></a>
-    <nav class="nav" aria-label="Основное меню">
+    <a class="logo" href="#top" aria-label="Авеню — на главную" data-i18n-aria="logo.aria">
+      <span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+      <span data-i18n="brand">Авеню</span>
+    </a>
+    <nav class="nav" aria-label="Основное меню" data-i18n-aria="nav.aria">
       <a href="#about" data-i18n="nav.about">О нас</a>
       <a href="#menu" data-i18n="nav.menu">Меню</a>
-      <a href="#gallery" data-i18n="nav.gallery">Галерея</a>
+      <a href="#events" data-i18n="nav.events">Банкеты</a>
+      <a href="#reviews" data-i18n="nav.reviews">Отзывы</a>
       <a href="#contact" data-i18n="nav.contact">Контакты</a>
     </nav>
     <div class="header-actions">
@@ -245,176 +273,218 @@ section{scroll-margin-top:68px}
 
 <main id="main">
   <section class="hero" id="top">
-    <img src="img/hero.webp" alt="" width="1024" height="683" fetchpriority="high">
+    <picture>
+      <source media="(max-width: 700px)" srcset="img/real-interior.webp">
+      <img src="img/real-exterior.webp" alt="" width="1280" height="960" fetchpriority="high">
+    </picture>
     <div class="container hero-content">
-      <span class="eyebrow" data-i18n="hero.eyebrow">Кафе · Бендеры</span>
-      <h1 data-i18n-html="hero.title">Кафе <em>Авеню</em></h1>
-      <p class="lead" data-i18n="hero.lead">Уютное место в центре города: завтраки с утра, вкусная кухня днём, десерты, кофе и коктейли до полуночи.</p>
+      <span class="eyebrow" data-i18n="hero.eyebrow">Кафе-бар · центр Бендер</span>
+      <h1 data-i18n-html="hero.title">Кафе-бар <em>Авеню</em></h1>
+      <p class="lead" data-i18n="hero.lead">Европейская, японская и национальная кухня, пицца и суши, коктейли, живая музыка и летняя терраса — на улице Ленина, в самом центре города.</p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="#menu"><span data-i18n="cta.menu">Смотреть меню</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-        <a class="btn btn-ghost" href="tel:+37355278887"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>+373 552 78 887</a>
+        <a class="btn btn-primary" href="tel:+37355278887"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="cta.table">Забронировать столик</span></a>
+        <a class="btn btn-ghost" href="#menu"><span data-i18n="cta.menu">Смотреть меню</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
-      <p class="open-badge"><span class="dot" id="openDot" aria-hidden="true"></span><span id="openText" data-i18n="hours.daily">Ежедневно 10:00 – 00:00</span></p>
+      <div class="chips">
+        <span class="chip"><span class="dot" id="openDot" aria-hidden="true"></span><span id="openText" data-i18n="hours.daily">Ежедневно 10:00 – 00:00</span></span>
+        <span class="chip"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><span data-i18n="hero.reviews">573 отзыва в Google</span></span>
+      </div>
     </div>
   </section>
 
   <section class="section" id="about">
     <div class="container">
-      <div class="about reveal">
-        <div>
-          <span class="eyebrow dark" data-i18n="about.eyebrow">О нас</span>
-          <div class="section-head" style="margin-bottom:0">
-            <h2 data-i18n="about.title">Место, куда хочется возвращаться</h2>
-            <p data-i18n="about.text">«Авеню» — это кафе на улице Ленина, где начинают утро с кофе и завтрака, встречаются с друзьями за обедом и отмечают праздники вечером. Тёплая атмосфера, внимательный сервис и блюда, которые готовят с душой.</p>
+      <div class="about">
+        <div class="reveal">
+          <span class="eyebrow" data-i18n="about.eyebrow">О нас</span>
+          <div class="section-head">
+            <h2 data-i18n="about.title">Любимое место в центре Бендер</h2>
+            <p data-i18n="about.text">«Авеню» — кафе-бар на улице Ленина, куда приходят на бизнес-ланч, встречаются с друзьями за пиццей и суши и отмечают праздники под живую музыку. Два уютных зала, мягкая мебель, приветливый персонал и летняя терраса в тёплое время года.</p>
           </div>
           <div class="stats">
-            <div class="stat"><strong>573+</strong><span data-i18n="about.reviews">отзывов в Google</span></div>
-            <div class="stat"><strong>14</strong><span data-i18n="about.hours">часов в день</span></div>
-            <div class="stat"><strong>7/7</strong><span data-i18n="about.days">без выходных</span></div>
+            <div class="stat"><strong>573</strong><span data-i18n="about.s1">отзыва в Google</span></div>
+            <div class="stat"><strong>4.3</strong><span data-i18n="about.s2">рейтинг на Яндекс</span></div>
+            <div class="stat"><strong>7/7</strong><span data-i18n="about.s3">до полуночи</span></div>
           </div>
         </div>
-        <div class="about-img"><img src="img/interior.webp" alt="Уютный интерьер кафе" data-i18n-alt="alt.interior" width="900" height="596" loading="lazy"></div>
+        <div class="about-media reveal">
+          <div class="about-img"><img src="img/real-exterior.webp" alt="Здание кафе-бара «Авеню» на улице Ленина" data-i18n-alt="alt.exterior" width="1280" height="960" loading="lazy"></div>
+          <div class="about-badge"><img src="img/real-logo.webp" alt="Логотип «Авеню»" data-i18n-alt="alt.logo" width="288" height="288" loading="lazy"></div>
+        </div>
       </div>
 
-      <div class="features" style="margin-top:72px">
-        <article class="feature reveal">
-          <div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-egg"/></svg></div>
-          <h3 data-i18n="f1.t">Завтраки</h3>
-          <p data-i18n="f1.d">С 10:00 — яичница, сырники, панкейки и свежий кофе.</p>
-        </article>
-        <article class="feature reveal">
-          <div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-utensils"/></svg></div>
-          <h3 data-i18n="f2.t">Кухня</h3>
-          <p data-i18n="f2.d">Салаты, горячие блюда, паста, пицца и блюда на гриле.</p>
-        </article>
-        <article class="feature reveal">
-          <div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-coffee"/></svg></div>
-          <h3 data-i18n="f3.t">Кофе и десерты</h3>
-          <p data-i18n="f3.d">Капучино, латте и домашние десерты к ним.</p>
-        </article>
-        <article class="feature reveal">
-          <div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-wine"/></svg></div>
-          <h3 data-i18n="f4.t">Вечер и праздники</h3>
-          <p data-i18n="f4.d">Коктейли до полуночи, дни рождения и банкеты.</p>
-        </article>
+      <div class="features">
+        <article class="feature reveal"><div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-utensils"/></svg></div><h3 data-i18n="f1.t">Три кухни</h3><p data-i18n="f1.d">Европейская, японская и национальная — от пиццы и стейков до суши и роллов.</p></article>
+        <article class="feature reveal"><div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-music"/></svg></div><h3 data-i18n="f2.t">Живая музыка</h3><p data-i18n="f2.d">Музыкальные вечера и тематические вечеринки.</p></article>
+        <article class="feature reveal"><div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-sun"/></svg></div><h3 data-i18n="f3.t">Летняя терраса</h3><p data-i18n="f3.d">Ужин на свежем воздухе в центре города.</p></article>
+        <article class="feature reveal"><div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg></div><h3 data-i18n="f4.t">Бизнес-ланч</h3><p data-i18n="f4.d">Быстрый и сытный обед в будние дни.</p></article>
+        <article class="feature reveal"><div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-truck"/></svg></div><h3 data-i18n="f5.t">Доставка</h3><p data-i18n="f5.d">Привезём любимые блюда по всему городу.</p></article>
+        <article class="feature reveal"><div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-baby"/></svg></div><h3 data-i18n="f6.t">Детское меню</h3><p data-i18n="f6.d">Приходите всей семьёй — для детей есть отдельное меню.</p></article>
       </div>
     </div>
   </section>
 
-  <section class="section menu-section" id="menu">
+  <section class="section dark-section" id="menu">
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow" data-i18n="menu.eyebrow">Меню</span>
         <h2 data-i18n="menu.title">Что у нас попробовать</h2>
-        <p data-i18n="menu.text">Небольшая подборка из нашего меню. Полное меню и актуальные цены — в кафе или по телефону.</p>
+        <p data-i18n="menu.text">Гости особенно хвалят нашу пиццу и суши. Полное меню и актуальные цены — в кафе или по телефону.</p>
       </div>
 
-      <div class="tabs" role="tablist" aria-label="Категории меню">
-        <button class="tab" role="tab" id="t-breakfast" aria-controls="p-breakfast" aria-selected="true" data-i18n="menu.c1">Завтраки</button>
-        <button class="tab" role="tab" id="t-kitchen" aria-controls="p-kitchen" aria-selected="false" tabindex="-1" data-i18n="menu.c2">Кухня</button>
-        <button class="tab" role="tab" id="t-dessert" aria-controls="p-dessert" aria-selected="false" tabindex="-1" data-i18n="menu.c3">Десерты</button>
-        <button class="tab" role="tab" id="t-drinks" aria-controls="p-drinks" aria-selected="false" tabindex="-1" data-i18n="menu.c4">Напитки</button>
+      <div class="tabs" role="tablist" aria-label="Категории меню" data-i18n-aria="menu.aria">
+        <button class="tab" role="tab" id="t-pizza" aria-controls="p-pizza" aria-selected="true" data-i18n="menu.c1">Пицца</button>
+        <button class="tab" role="tab" id="t-sushi" aria-controls="p-sushi" aria-selected="false" tabindex="-1" data-i18n="menu.c2">Суши и роллы</button>
+        <button class="tab" role="tab" id="t-kitchen" aria-controls="p-kitchen" aria-selected="false" tabindex="-1" data-i18n="menu.c3">Кухня</button>
+        <button class="tab" role="tab" id="t-dessert" aria-controls="p-dessert" aria-selected="false" tabindex="-1" data-i18n="menu.c4">Десерты и кофе</button>
+        <button class="tab" role="tab" id="t-bar" aria-controls="p-bar" aria-selected="false" tabindex="-1" data-i18n="menu.c5">Бар</button>
       </div>
 
-      <div class="menu-panel" role="tabpanel" id="p-breakfast" aria-labelledby="t-breakfast">
-        <div class="menu-photo"><img src="img/breakfast.webp" alt="Завтрак с яичницей" data-i18n-alt="alt.breakfast" width="900" height="506" loading="lazy"></div>
+      <div class="menu-panel" role="tabpanel" id="p-pizza" aria-labelledby="t-pizza">
+        <div class="menu-photo"><img src="img/real-pizza.webp" alt="Пицца в кафе «Авеню»" data-i18n-alt="alt.pizza" width="960" height="1280" loading="lazy"></div>
         <ul class="menu-list">
-          <li><h3 data-i18n="m.b1">Яичница с беконом</h3><p data-i18n="m.b1d">Глазунья, хрустящий бекон, тосты и свежие овощи</p></li>
-          <li><h3 data-i18n="m.b2">Панкейки</h3><p data-i18n="m.b2d">С ягодами, сливочным кремом и кленовым сиропом</p></li>
-          <li><h3 data-i18n="m.b3">Сырники</h3><p data-i18n="m.b3d">Со сметаной и ягодным соусом</p></li>
-          <li><h3 data-i18n="m.b4">Омлет</h3><p data-i18n="m.b4d">С сыром, ветчиной или овощами на выбор</p></li>
+          <li><h3 data-i18n="m.p1">Маргарита</h3><p data-i18n="m.p1d">Томатный соус, моцарелла, базилик</p></li>
+          <li><h3 data-i18n="m.p2">Пепперони</h3><p data-i18n="m.p2d">Острая колбаса пепперони и много сыра</p></li>
+          <li><h3 data-i18n="m.p3">Четыре сыра</h3><p data-i18n="m.p3d">Моцарелла, пармезан, дор блю, сулугуни</p></li>
+          <li><h3 data-i18n="m.p4">Фирменная «Авеню»</h3><p data-i18n="m.p4d">Спросите официанта о фирменной пицце</p></li>
+        </ul>
+      </div>
+      <div class="menu-panel" role="tabpanel" id="p-sushi" aria-labelledby="t-sushi" hidden>
+        <div class="menu-photo"><img src="img/sushi.webp" alt="Суши и роллы" data-i18n-alt="alt.sushi" width="900" height="600" loading="lazy"></div>
+        <ul class="menu-list">
+          <li><h3 data-i18n="m.s1">Филадельфия</h3><p data-i18n="m.s1d">Лосось, сливочный сыр, огурец</p></li>
+          <li><h3 data-i18n="m.s2">Калифорния</h3><p data-i18n="m.s2d">Краб, авокадо, икра тобико</p></li>
+          <li><h3 data-i18n="m.s3">Запечённые роллы</h3><p data-i18n="m.s3d">Под сырной шапкой с соусом</p></li>
+          <li><h3 data-i18n="m.s4">Сеты</h3><p data-i18n="m.s4d">Большие наборы для компании</p></li>
         </ul>
       </div>
       <div class="menu-panel" role="tabpanel" id="p-kitchen" aria-labelledby="t-kitchen" hidden>
         <div class="menu-photo"><img src="img/steak.webp" alt="Стейк с картофелем" data-i18n-alt="alt.steak" width="900" height="600" loading="lazy"></div>
         <ul class="menu-list">
-          <li><h3 data-i18n="m.k1">Стейк из свинины или говядины</h3><p data-i18n="m.k1d">На гриле, с картофелем и соусом</p></li>
-          <li><h3 data-i18n="m.k2">Салат с лососем</h3><p data-i18n="m.k2d">Микс салатов, лосось, лимонная заправка</p></li>
-          <li><h3 data-i18n="m.k3">Паста</h3><p data-i18n="m.k3d">Карбонара, с курицей и грибами или с морепродуктами</p></li>
-          <li><h3 data-i18n="m.k4">Пицца</h3><p data-i18n="m.k4d">Пепперони, «Четыре сыра», фирменная</p></li>
-          <li><h3 data-i18n="m.k5">Бургер</h3><p data-i18n="m.k5d">Сочная котлета, сыр, овощи и картофель фри</p></li>
+          <li><h3 data-i18n="m.k1">Салаты</h3><p data-i18n="m.k1d">Цезарь, греческий, с лососем и тёплые салаты</p></li>
+          <li><h3 data-i18n="m.k2">Горячие блюда</h3><p data-i18n="m.k2d">Стейки, мясо на гриле, рыба</p></li>
+          <li><h3 data-i18n="m.k3">Паста</h3><p data-i18n="m.k3d">Карбонара, с курицей и грибами</p></li>
+          <li><h3 data-i18n="m.k4">Национальная кухня</h3><p data-i18n="m.k4d">Мамалыга, плачинды и другие домашние блюда</p></li>
+          <li><h3 data-i18n="m.k5">Супы</h3><p data-i18n="m.k5d">Суп дня и классические рецепты</p></li>
         </ul>
       </div>
       <div class="menu-panel" role="tabpanel" id="p-dessert" aria-labelledby="t-dessert" hidden>
         <div class="menu-photo"><img src="img/cake.webp" alt="Ягодный торт" data-i18n-alt="alt.cake" width="900" height="506" loading="lazy"></div>
         <ul class="menu-list">
-          <li><h3 data-i18n="m.d1">Чизкейк</h3><p data-i18n="m.d1d">Классический или ягодный</p></li>
-          <li><h3 data-i18n="m.d2">Торт дня</h3><p data-i18n="m.d2d">Спросите у официанта, что сегодня в витрине</p></li>
-          <li><h3 data-i18n="m.d3">Мороженое</h3><p data-i18n="m.d3d">Несколько шариков с топпингом</p></li>
+          <li><h3 data-i18n="m.d1">Десерты</h3><p data-i18n="m.d1d">Чизкейк, торт дня, мороженое</p></li>
+          <li><h3 data-i18n="m.d2">Кофе</h3><p data-i18n="m.d2d">Эспрессо, американо, капучино, латте</p></li>
+          <li><h3 data-i18n="m.d3">Чай</h3><p data-i18n="m.d3d">Чёрный, зелёный, фруктовый, травяной</p></li>
         </ul>
       </div>
-      <div class="menu-panel" role="tabpanel" id="p-drinks" aria-labelledby="t-drinks" hidden>
+      <div class="menu-panel" role="tabpanel" id="p-bar" aria-labelledby="t-bar" hidden>
         <div class="menu-photo"><img src="img/cocktail.webp" alt="Коктейль" data-i18n-alt="alt.cocktail" width="900" height="601" loading="lazy"></div>
         <ul class="menu-list">
-          <li><h3 data-i18n="m.r1">Кофе</h3><p data-i18n="m.r1d">Эспрессо, американо, капучино, латте, раф</p></li>
-          <li><h3 data-i18n="m.r2">Чай</h3><p data-i18n="m.r2d">Чёрный, зелёный, фруктовый, травяной</p></li>
-          <li><h3 data-i18n="m.r3">Лимонады и фреши</h3><p data-i18n="m.r3d">Домашние лимонады и свежевыжатые соки</p></li>
-          <li><h3 data-i18n="m.r4">Коктейли</h3><p data-i18n="m.r4d">Классика и авторские коктейли</p></li>
+          <li><h3 data-i18n="m.b1">Коктейли</h3><p data-i18n="m.b1d">Большой выбор классических и авторских коктейлей</p></li>
+          <li><h3 data-i18n="m.b2">Вино</h3><p data-i18n="m.b2d">Молдавские и приднестровские вина</p></li>
+          <li><h3 data-i18n="m.b3">Пиво и крепкие напитки</h3><p data-i18n="m.b3d">Разливное и бутылочное пиво, виски, коньяк</p></li>
+          <li><h3 data-i18n="m.b4">Лимонады и фреши</h3><p data-i18n="m.b4d">Домашние лимонады и свежевыжатые соки</p></li>
         </ul>
       </div>
 
       <div class="menu-note">
-        <a class="btn btn-primary" href="tel:+37355278887"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="cta.ask">Узнать цены и забронировать</span></a>
+        <a class="btn btn-primary" href="tel:+37355278887"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="cta.order">Заказать доставку</span></a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/avenue_bendery/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-insta"/></svg><span data-i18n="cta.insta">Меню в Instagram</span></a>
       </div>
     </div>
   </section>
 
-  <section class="section" id="gallery">
+  <section class="section" id="events">
+    <div class="container">
+      <div class="events reveal">
+        <img src="img/real-interior.webp" alt="" width="960" height="1280" loading="lazy">
+        <span class="eyebrow" data-i18n="ev.eyebrow">Банкеты и праздники</span>
+        <h2 data-i18n="ev.title">Отметьте свой праздник в «Авеню»</h2>
+        <p data-i18n="ev.text">Дни рождения, корпоративы, свадьбы и выпускные. Поможем с меню, подготовим зал и сделаем так, чтобы гости запомнили этот вечер.</p>
+        <ul>
+          <li data-i18n="ev.l1">Дни рождения</li>
+          <li data-i18n="ev.l2">Корпоративы</li>
+          <li data-i18n="ev.l3">Свадьбы</li>
+          <li data-i18n="ev.l4">Тематические вечеринки</li>
+        </ul>
+        <a class="btn btn-primary" href="tel:+37355278887"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="cta.banquet">Обсудить банкет</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section flush" id="gallery">
     <div class="container">
       <div class="section-head reveal">
-        <span class="eyebrow dark" data-i18n="gal.eyebrow">Галерея</span>
-        <h2 data-i18n="gal.title">Вкусно — даже на фото</h2>
+        <span class="eyebrow" data-i18n="gal.eyebrow">Галерея</span>
+        <h2 data-i18n="gal.title">Атмосфера «Авеню»</h2>
       </div>
       <div class="gallery reveal">
-        <figure class="tall"><img src="img/burger.webp" alt="Бургер" data-i18n-alt="alt.burger" width="683" height="1024" loading="lazy"></figure>
+        <figure class="tall"><img src="img/real-pizza.webp" alt="Пицца в кафе «Авеню»" data-i18n-alt="alt.pizza" width="960" height="1280" loading="lazy"></figure>
+        <figure><img src="img/sushi.webp" alt="Суши и роллы" data-i18n-alt="alt.sushi" width="900" height="600" loading="lazy"></figure>
         <figure><img src="img/latte.webp" alt="Латте" data-i18n-alt="alt.latte" width="900" height="600" loading="lazy"></figure>
-        <figure><img src="img/pizza.webp" alt="Пицца" data-i18n-alt="alt.pizza" width="900" height="600" loading="lazy"></figure>
-        <figure class="tall"><img src="img/cappuccino.webp" alt="Капучино с круассаном" data-i18n-alt="alt.cappuccino" width="683" height="1024" loading="lazy"></figure>
-        <figure class="wide"><img src="img/salad.webp" alt="Салат с лососем" data-i18n-alt="alt.salad" width="900" height="599" loading="lazy"></figure>
-        <figure><img src="img/pancakes.webp" alt="Панкейки" data-i18n-alt="alt.pancakes" width="900" height="600" loading="lazy"></figure>
+        <figure class="tall"><img src="img/real-interior.webp" alt="Зал кафе с красными шторами" data-i18n-alt="alt.interior" width="960" height="1280" loading="lazy"></figure>
+        <figure class="wide"><img src="img/real-winter.webp" alt="Кафе «Авеню» зимой" data-i18n-alt="alt.winter" width="1280" height="718" loading="lazy"></figure>
+        <figure><img src="img/salad.webp" alt="Салат с лососем" data-i18n-alt="alt.salad" width="900" height="599" loading="lazy"></figure>
+        <figure><img src="img/cocktail.webp" alt="Коктейль" data-i18n-alt="alt.cocktail" width="900" height="601" loading="lazy"></figure>
+        <figure><img src="img/steak.webp" alt="Стейк с картофелем" data-i18n-alt="alt.steak" width="900" height="600" loading="lazy"></figure>
         <figure><img src="img/dessert.webp" alt="Десерт с ягодами" data-i18n-alt="alt.dessert" width="900" height="600" loading="lazy"></figure>
-        <figure><img src="img/soup.webp" alt="Суп" data-i18n-alt="alt.soup" width="900" height="600" loading="lazy"></figure>
-        <figure><img src="img/pasta.webp" alt="Паста" data-i18n-alt="alt.pasta" width="683" height="1024" loading="lazy"></figure>
-      </div>
-      <p style="margin-top:28px"><a class="btn btn-dark" href="https://www.instagram.com/avenue_bendery/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-insta"/></svg><span data-i18n="gal.insta">Больше фото в Instagram</span></a></p>
-    </div>
-  </section>
-
-  <section class="section" style="padding-top:0">
-    <div class="container">
-      <div class="reviews reveal">
-        <div class="big">573</div>
-        <div>
-          <div class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
-          <h2 data-i18n="rev.title">Отзывы гостей в Google</h2>
-          <p data-i18n="rev.text">Сотни гостей уже поделились впечатлениями. Прочитайте, что о нас пишут, и оставьте свой отзыв.</p>
-        </div>
-        <a class="btn btn-dark" href="https://search.google.com/local/reviews?placeid=ChIJZ4zDjKEGyUARq2mpXUN-DnI" target="_blank" rel="noopener"><span data-i18n="rev.cta">Читать отзывы</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
   </section>
 
-  <section class="section" id="contact" style="padding-top:0">
+  <section class="section flush" id="reviews">
     <div class="container">
       <div class="section-head reveal">
-        <span class="eyebrow dark" data-i18n="nav.contact">Контакты</span>
+        <span class="eyebrow" data-i18n="rev.eyebrow">Отзывы</span>
+        <h2 data-i18n="rev.title">Что говорят гости</h2>
+      </div>
+      <div class="ratings reveal">
+        <a class="rating" href="https://search.google.com/local/reviews?placeid=ChIJZ4zDjKEGyUARq2mpXUN-DnI" target="_blank" rel="noopener"><strong>573</strong><span data-i18n="rev.r1">отзыва на Google Картах</span></a>
+        <a class="rating" href="https://yandex.ru/maps/org/avenyu/1679460260/reviews/" target="_blank" rel="noopener"><strong>4.3 ★</strong><span data-i18n="rev.r2">рейтинг на Яндекс Картах</span></a>
+        <a class="rating" href="https://www.tripadvisor.com/Restaurant_Review-g777897-d7679461-Reviews-Cafe_Avenue-Bender_Transnistria.html" target="_blank" rel="noopener"><strong>№2</strong><span data-i18n="rev.r3">среди ресторанов Бендер на Tripadvisor</span></a>
+      </div>
+      <div class="quotes">
+        <figure class="quote reveal">
+          <div class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote>«Расположен в самом центре города, что очень удобно. Довольно разнообразное меню, блюда на любой вкус. Особенно отмечу пиццу. Персонал приветлив.»</blockquote>
+          <figcaption data-i18n="rev.src">Гость, Яндекс Карты</figcaption>
+        </figure>
+        <figure class="quote reveal">
+          <div class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote>«Отличный сервис, вкусная кухня. Место просто замечательное, всем рекомендую.»</blockquote>
+          <figcaption data-i18n="rev.src">Гость, Яндекс Карты</figcaption>
+        </figure>
+        <figure class="quote reveal">
+          <div class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote>«Благоприятная обстановка, хороший персонал. Вкусные напитки и еда. Есть зал для курящих и без них, что не везде.»</blockquote>
+          <figcaption data-i18n="rev.src">Гость, Яндекс Карты</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section flush" id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="nav.contact">Контакты</span>
         <h2 data-i18n="con.title">Ждём вас в гости</h2>
       </div>
       <div class="contact">
         <div class="info-card reveal">
           <div class="info-row">
             <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
-            <div><h3 data-i18n="con.addr">Адрес</h3><a href="https://www.google.com/maps/search/?api=1&query=46.8228172,29.4820508&query_place_id=ChIJZ4zDjKEGyUARq2mpXUN-DnI" target="_blank" rel="noopener" data-i18n="con.addrv">ул. Ленина 20а, Бендеры</a></div>
+            <div><h3 data-i18n="con.addr">Адрес</h3><a href="https://www.google.com/maps/search/?api=1&query=46.8228172,29.4820508&query_place_id=ChIJZ4zDjKEGyUARq2mpXUN-DnI" target="_blank" rel="noopener" data-i18n="con.addrv">ул. Ленина 20А, Бендеры</a></div>
           </div>
           <div class="info-row">
             <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
-            <div><h3 data-i18n="con.phone">Телефон</h3><a href="tel:+37355278887">+373 552 78 887</a></div>
+            <div><h3 data-i18n="con.phone">Бронирование и доставка</h3><a href="tel:+37355278887">+373 552 78 887</a></div>
           </div>
           <div class="info-row">
             <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>
-            <div style="flex:1"><h3 data-i18n="con.hours">Часы работы</h3>
-              <ul class="hours" id="hours"></ul>
-            </div>
+            <div style="flex:1"><h3 data-i18n="con.hours">Часы работы</h3><ul class="hours" id="hours"></ul></div>
+          </div>
+          <div class="info-row">
+            <svg class="icon" aria-hidden="true"><use href="#i-wifi"/></svg>
+            <div><h3 data-i18n="con.extra">Удобства</h3><p data-i18n="con.extrav">Бесплатный Wi-Fi · два зала · летняя терраса</p></div>
           </div>
           <div class="info-row">
             <svg class="icon" aria-hidden="true"><use href="#i-insta"/></svg>
@@ -422,7 +492,7 @@ section{scroll-margin-top:68px}
           </div>
         </div>
         <div class="map reveal">
-          <iframe title="Карта: кафе Авеню" data-i18n-title="con.map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=46.8228172,29.4820508&z=17&output=embed"></iframe>
+          <iframe title="Карта: кафе-бар «Авеню»" data-i18n-title="con.map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=46.8228172,29.4820508&z=17&output=embed"></iframe>
         </div>
       </div>
     </div>
@@ -432,8 +502,8 @@ section{scroll-margin-top:68px}
 <footer class="footer">
   <div class="container footer-inner">
     <div>
-      <a class="logo" href="#top">Avenue<span>.</span></a>
-      <p style="margin-top:10px" data-i18n="foot.text">Кафе в Бендерах · ул. Ленина 20а · ежедневно 10:00–00:00</p>
+      <a class="logo" href="#top"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span data-i18n="brand">Авеню</span></a>
+      <p style="margin-top:12px" data-i18n="foot.text">Кафе-бар в Бендерах · ул. Ленина 20А · ежедневно 10:00–00:00</p>
     </div>
     <div class="social">
       <a href="https://www.instagram.com/avenue_bendery/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-insta"/></svg></a>
@@ -452,43 +522,53 @@ document.documentElement.classList.add('js');
 
 const I18N = {
   ro: {
-    "skip":"Salt la conținut",
-    "nav.about":"Despre noi","nav.menu":"Meniu","nav.gallery":"Galerie","nav.contact":"Contacte",
-    "cta.book":"Rezervă","cta.menu":"Vezi meniul","cta.ask":"Află prețurile și rezervă","cta.call":"Sună","cta.route":"Traseu",
-    "hero.eyebrow":"Cafenea · Tighina","hero.title":"Cafeneaua <em>Avenue</em>",
-    "hero.lead":"Un loc primitor în centrul orașului: mic dejun dimineața, bucătărie gustoasă ziua, deserturi, cafea și cocktailuri până la miezul nopții.",
+    "skip":"Salt la conținut","brand":"Avenue","logo.aria":"Avenue — pagina principală","nav.aria":"Meniu principal","menu.aria":"Categorii meniu",
+    "nav.about":"Despre noi","nav.menu":"Meniu","nav.events":"Banchete","nav.reviews":"Recenzii","nav.contact":"Contacte",
+    "cta.book":"Rezervă","cta.table":"Rezervă o masă","cta.menu":"Vezi meniul","cta.order":"Comandă livrare","cta.insta":"Meniul pe Instagram","cta.banquet":"Discută un banchet","cta.call":"Sună","cta.route":"Traseu",
+    "hero.eyebrow":"Cafe-bar · centrul Tighinei","hero.title":"Cafe-bar <em>Avenue</em>",
+    "hero.lead":"Bucătărie europeană, japoneză și națională, pizza și sushi, cocktailuri, muzică live și terasă de vară — pe strada Lenin, chiar în centrul orașului.",
+    "hero.reviews":"573 de recenzii pe Google",
     "hours.daily":"Zilnic 10:00 – 00:00","hours.open":"Deschis acum · până la 00:00","hours.closed":"Închis acum · deschidem la 10:00",
-    "about.eyebrow":"Despre noi","about.title":"Locul în care vrei să revii",
-    "about.text":"„Avenue” este cafeneaua de pe strada Lenin, unde îți începi dimineața cu o cafea și un mic dejun, te întâlnești cu prietenii la prânz și sărbătorești seara. Atmosferă caldă, servire atentă și mâncare gătită cu suflet.",
-    "about.reviews":"recenzii pe Google","about.hours":"ore pe zi","about.days":"fără zile libere",
-    "f1.t":"Mic dejun","f1.d":"De la 10:00 — ouă ochiuri, clătite americane, brânzoaice și cafea proaspătă.",
-    "f2.t":"Bucătărie","f2.d":"Salate, feluri calde, paste, pizza și preparate la grătar.",
-    "f3.t":"Cafea și deserturi","f3.d":"Cappuccino, latte și deserturi de casă.",
-    "f4.t":"Seri și sărbători","f4.d":"Cocktailuri până la miezul nopții, zile de naștere și banchete.",
-    "menu.eyebrow":"Meniu","menu.title":"Ce să încerci la noi","menu.text":"O mică selecție din meniul nostru. Meniul complet și prețurile actuale — în cafenea sau la telefon.",
-    "menu.c1":"Mic dejun","menu.c2":"Bucătărie","menu.c3":"Deserturi","menu.c4":"Băuturi",
-    "m.b1":"Ochiuri cu bacon","m.b1d":"Ouă ochiuri, bacon crocant, pâine prăjită și legume proaspete",
-    "m.b2":"Pancakes","m.b2d":"Cu fructe de pădure, cremă și sirop de arțar",
-    "m.b3":"Brânzoaice","m.b3d":"Cu smântână și sos de fructe de pădure",
-    "m.b4":"Omletă","m.b4d":"Cu cașcaval, șuncă sau legume, la alegere",
-    "m.k1":"Friptură de porc sau vită","m.k1d":"La grătar, cu cartofi și sos",
-    "m.k2":"Salată cu somon","m.k2d":"Mix de salate, somon, dressing de lămâie",
-    "m.k3":"Paste","m.k3d":"Carbonara, cu pui și ciuperci sau cu fructe de mare",
-    "m.k4":"Pizza","m.k4d":"Pepperoni, Patru brânzeturi, pizza casei",
-    "m.k5":"Burger","m.k5d":"Chiftea suculentă, cașcaval, legume și cartofi prăjiți",
-    "m.d1":"Cheesecake","m.d1d":"Clasic sau cu fructe de pădure",
-    "m.d2":"Tortul zilei","m.d2d":"Întrebați ospătarul ce avem azi în vitrină",
-    "m.d3":"Înghețată","m.d3d":"Câteva cupe cu topping",
-    "m.r1":"Cafea","m.r1d":"Espresso, americano, cappuccino, latte, raf",
-    "m.r2":"Ceai","m.r2d":"Negru, verde, de fructe, de plante",
-    "m.r3":"Limonade și fresh-uri","m.r3d":"Limonade de casă și sucuri proaspăt stoarse",
-    "m.r4":"Cocktailuri","m.r4d":"Clasice și de autor",
-    "gal.eyebrow":"Galerie","gal.title":"Gustos — chiar și în poze","gal.insta":"Mai multe poze pe Instagram",
-    "rev.title":"Recenziile oaspeților pe Google","rev.text":"Sute de oaspeți și-au împărtășit deja impresiile. Citește ce se scrie despre noi și lasă-ți și tu părerea.","rev.cta":"Citește recenziile",
-    "con.title":"Vă așteptăm cu drag","con.addr":"Adresă","con.addrv":"str. Lenin 20a, Tighina","con.phone":"Telefon","con.hours":"Program","con.map":"Hartă: cafeneaua Avenue",
-    "foot.text":"Cafenea în Tighina · str. Lenin 20a · zilnic 10:00–00:00",
-    "alt.interior":"Interior primitor al cafenelei","alt.breakfast":"Mic dejun cu ouă ochiuri","alt.steak":"Friptură cu cartofi","alt.cake":"Tort cu fructe de pădure","alt.cocktail":"Cocktail",
-    "alt.burger":"Burger","alt.latte":"Latte","alt.pizza":"Pizza","alt.cappuccino":"Cappuccino cu croissant","alt.salad":"Salată cu somon","alt.pancakes":"Pancakes","alt.dessert":"Desert cu fructe de pădure","alt.soup":"Supă","alt.pasta":"Paste",
+    "about.eyebrow":"Despre noi","about.title":"Locul preferat din centrul Tighinei",
+    "about.text":"„Avenue” este un cafe-bar pe strada Lenin, unde vii la prânz de afaceri, te întâlnești cu prietenii la o pizza sau sushi și sărbătorești cu muzică live. Două săli primitoare, mobilier confortabil, personal amabil și terasă de vară în sezonul cald.",
+    "about.s1":"recenzii pe Google","about.s2":"rating pe Yandex","about.s3":"până la miezul nopții",
+    "f1.t":"Trei bucătării","f1.d":"Europeană, japoneză și națională — de la pizza și fripturi la sushi și rulouri.",
+    "f2.t":"Muzică live","f2.d":"Seri muzicale și petreceri tematice.",
+    "f3.t":"Terasă de vară","f3.d":"Cină în aer liber, în centrul orașului.",
+    "f4.t":"Prânz de afaceri","f4.d":"Un prânz rapid și sățios în zilele lucrătoare.",
+    "f5.t":"Livrare","f5.d":"Livrăm preparatele preferate în tot orașul.",
+    "f6.t":"Meniu pentru copii","f6.d":"Veniți cu toată familia — avem meniu separat pentru copii.",
+    "menu.eyebrow":"Meniu","menu.title":"Ce să încerci la noi","menu.text":"Oaspeții laudă în special pizza și sushi. Meniul complet și prețurile actuale — în cafenea sau la telefon.",
+    "menu.c1":"Pizza","menu.c2":"Sushi și rulouri","menu.c3":"Bucătărie","menu.c4":"Deserturi și cafea","menu.c5":"Bar",
+    "m.p1":"Margherita","m.p1d":"Sos de roșii, mozzarella, busuioc",
+    "m.p2":"Pepperoni","m.p2d":"Salam picant pepperoni și mult cașcaval",
+    "m.p3":"Patru brânzeturi","m.p3d":"Mozzarella, parmezan, dor blue, suluguni",
+    "m.p4":"Pizza casei „Avenue”","m.p4d":"Întrebați ospătarul despre pizza casei",
+    "m.s1":"Philadelphia","m.s1d":"Somon, cremă de brânză, castravete",
+    "m.s2":"California","m.s2d":"Crab, avocado, icre tobiko",
+    "m.s3":"Rulouri coapte","m.s3d":"Sub crustă de brânză, cu sos",
+    "m.s4":"Seturi","m.s4d":"Seturi mari pentru companie",
+    "m.k1":"Salate","m.k1d":"Caesar, grecească, cu somon și salate calde",
+    "m.k2":"Feluri principale","m.k2d":"Fripturi, carne la grătar, pește",
+    "m.k3":"Paste","m.k3d":"Carbonara, cu pui și ciuperci",
+    "m.k4":"Bucătărie națională","m.k4d":"Mămăligă, plăcinte și alte preparate de casă",
+    "m.k5":"Supe","m.k5d":"Supa zilei și rețete clasice",
+    "m.d1":"Deserturi","m.d1d":"Cheesecake, tortul zilei, înghețată",
+    "m.d2":"Cafea","m.d2d":"Espresso, americano, cappuccino, latte",
+    "m.d3":"Ceai","m.d3d":"Negru, verde, de fructe, de plante",
+    "m.b1":"Cocktailuri","m.b1d":"Mare varietate de cocktailuri clasice și de autor",
+    "m.b2":"Vin","m.b2d":"Vinuri moldovenești și nistrene",
+    "m.b3":"Bere și băuturi tari","m.b3d":"Bere la halbă și la sticlă, whisky, coniac",
+    "m.b4":"Limonade și fresh-uri","m.b4d":"Limonade de casă și sucuri proaspăt stoarse",
+    "ev.eyebrow":"Banchete și sărbători","ev.title":"Sărbătorește la „Avenue”",
+    "ev.text":"Zile de naștere, petreceri corporative, nunți și absolviri. Te ajutăm cu meniul, pregătim sala și facem ca oaspeții să țină minte această seară.",
+    "ev.l1":"Zile de naștere","ev.l2":"Petreceri corporative","ev.l3":"Nunți","ev.l4":"Petreceri tematice",
+    "gal.eyebrow":"Galerie","gal.title":"Atmosfera „Avenue”",
+    "rev.eyebrow":"Recenzii","rev.title":"Ce spun oaspeții","rev.r1":"recenzii pe Google Maps","rev.r2":"rating pe Yandex Maps","rev.r3":"printre restaurantele din Tighina pe Tripadvisor","rev.src":"Oaspete, Yandex Maps (recenzie în rusă)",
+    "con.title":"Vă așteptăm cu drag","con.addr":"Adresă","con.addrv":"str. Lenin 20A, Tighina","con.phone":"Rezervări și livrare","con.hours":"Program","con.extra":"Facilități","con.extrav":"Wi-Fi gratuit · două săli · terasă de vară","con.map":"Hartă: cafe-bar „Avenue”",
+    "foot.text":"Cafe-bar în Tighina · str. Lenin 20A · zilnic 10:00–00:00",
+    "alt.exterior":"Clădirea cafe-barului „Avenue” pe strada Lenin","alt.logo":"Logo „Avenue”","alt.pizza":"Pizza în cafeneaua „Avenue”","alt.sushi":"Sushi și rulouri","alt.steak":"Friptură cu cartofi","alt.cake":"Tort cu fructe de pădure","alt.cocktail":"Cocktail",
+    "alt.latte":"Latte","alt.interior":"Sala cafenelei cu draperii roșii","alt.winter":"Cafeneaua „Avenue” iarna","alt.salad":"Salată cu somon","alt.dessert":"Desert cu fructe de pădure",
     "days":["Luni","Marți","Miercuri","Joi","Vineri","Sâmbătă","Duminică"]
   },
   ru: {
@@ -500,13 +580,13 @@ const I18N = {
 // Snapshot the Russian source text so switching back restores it exactly.
 document.querySelectorAll('[data-i18n]').forEach(el => I18N.ru[el.dataset.i18n] ??= el.textContent);
 document.querySelectorAll('[data-i18n-html]').forEach(el => I18N.ru[el.dataset.i18nHtml] = el.innerHTML);
-document.querySelectorAll('[data-i18n-alt]').forEach(el => I18N.ru[el.dataset.i18nAlt] = el.alt);
+document.querySelectorAll('[data-i18n-alt]').forEach(el => I18N.ru[el.dataset.i18nAlt] ??= el.alt);
 document.querySelectorAll('[data-i18n-title]').forEach(el => I18N.ru[el.dataset.i18nTitle] = el.title);
-document.querySelectorAll('[data-i18n-aria]').forEach(el => I18N.ru['aria:' + el.dataset.i18nAria] = el.getAttribute('aria-label'));
+document.querySelectorAll('[data-i18n-aria]').forEach(el => I18N.ru['aria:' + el.dataset.i18nAria] ??= el.getAttribute('aria-label'));
 
 let lang = 'ru';
 
-// Chisinau/Tiraspol time, so "open now" is correct for visitors anywhere.
+// Moldova time, so "open now" is right for visitors anywhere.
 function localNow() {
   const parts = new Intl.DateTimeFormat('en-GB', {timeZone:'Europe/Chisinau', weekday:'short', hour:'numeric', hour12:false}).formatToParts(new Date());
   const wd = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].indexOf(parts.find(p => p.type === 'weekday').value);
@@ -536,15 +616,13 @@ function setLang(l) {
     if (v) el.setAttribute('aria-label', v);
   });
   document.querySelectorAll('.lang button').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === l));
-  document.title = l === 'ro' ? 'Cafeneaua „Avenue” — Tighina' : 'Кафе «Авеню» — Бендеры';
+  document.title = l === 'ro' ? 'Cafe-bar „Avenue” — Tighina' : 'Кафе-бар «Авеню» — Бендеры';
   renderHours();
-  try { localStorage.setItem('lang', l); } catch (e) {}
 }
 
+// Russian on every visit; Romanian is one tap away.
 document.querySelectorAll('.lang button').forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
-let saved = null;
-try { saved = localStorage.getItem('lang'); } catch (e) {}
-setLang(saved === 'ro' ? 'ro' : 'ru');
+setLang('ru');
 
 // Menu tabs (WAI-ARIA tabs pattern with arrow-key support)
 const tabs = [...document.querySelectorAll('[role="tab"]')];
@@ -566,12 +644,10 @@ tabs.forEach((t, i) => {
   });
 });
 
-// Header background after scrolling past the top of the hero
 const header = document.getElementById('header');
 const onScroll = () => header.classList.toggle('scrolled', scrollY > 40);
 addEventListener('scroll', onScroll, {passive:true}); onScroll();
 
-// Reveal on scroll
 if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver(entries => entries.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
