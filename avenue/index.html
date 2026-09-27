@@ -4,11 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Кафе-бар «Авеню» — Бендеры</title>
-<meta name="description" content="Кафе-бар «Авеню» в центре Бендер: европейская, японская и национальная кухня, пицца, суши, живая музыка, летняя терраса, банкеты и доставка. Ежедневно 10:00–00:00. ул. Ленина 20А.">
+<meta name="description" content="Кафе-бар «Авеню» в центре Бендер: европейская, японская и национальная кухня, пицца, суши, живая музыка, летняя терраса, банкеты и доставка. Ежедневно 11:00–00:00. ул. Ленина 20А.">
 <meta property="og:title" content="Кафе-бар «Авеню» — Бендеры">
-<meta property="og:description" content="Пицца, суши, европейская кухня, живая музыка и банкеты. Ежедневно 10:00–00:00.">
+<meta property="og:description" content="Пицца, суши, европейская кухня, живая музыка и банкеты. Ежедневно 11:00–00:00.">
 <meta property="og:image" content="img/real-exterior.webp">
 <meta name="theme-color" content="#141212">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%2212%22 fill=%22%23C8102E%22/%3E%3Cpath d=%22M12 6.5v5.5l3.5 2%22 stroke=%22white%22 stroke-width=%222.2%22 fill=%22none%22 stroke-linecap=%22round%22/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
@@ -18,11 +19,11 @@
   "@type": "Restaurant",
   "name": "Кафе-бар «Авеню»",
   "image": "img/real-exterior.webp",
-  "servesCuisine": ["Европейская", "Японская", "Национальная"],
+  "servesCuisine": ["Европейская", "Японская", "Грузинская", "Национальная"],
   "telephone": "+37355278887",
   "address": {"@type": "PostalAddress", "streetAddress": "ул. Ленина 20А", "addressLocality": "Бендеры", "addressCountry": "MD"},
   "geo": {"@type": "GeoCoordinates", "latitude": 46.8228172, "longitude": 29.4820508},
-  "openingHours": "Mo-Su 10:00-24:00",
+  "openingHours": "Mo-Su 11:00-24:00",
   "sameAs": ["https://www.instagram.com/avenue_bendery/"]
 }
 </script>
@@ -141,21 +142,28 @@ section{scroll-margin-top:68px}
 .feature p{color:var(--color-muted-foreground);font-size:16px}
 
 /* Menu */
-.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:36px;scrollbar-width:none}
-.tabs::-webkit-scrollbar{display:none}
-.tab{flex:none;min-height:46px;padding:10px 20px;border-radius:999px;border:1px solid rgba(247,242,239,.25);background:transparent;color:var(--color-on-dark);font:700 15px var(--font-body);cursor:pointer;transition:background-color .2s,color .2s,border-color .2s}
-.tab:hover{border-color:var(--color-red-on-dark)}
-.tab[aria-selected="true"]{background:var(--color-primary);border-color:var(--color-primary);color:#fff}
-.menu-panel{display:grid;gap:28px}
-.menu-panel[hidden]{display:none}
-@media (min-width:960px){.menu-panel{grid-template-columns:400px 1fr;gap:56px;align-items:start}}
-.menu-photo{border-radius:20px;overflow:hidden;aspect-ratio:4/3}
-.menu-photo img{width:100%;height:100%;object-fit:cover}
-.menu-list{list-style:none;margin:0;padding:0}
-.menu-list li{padding:18px 0;border-bottom:1px dashed rgba(247,242,239,.2)}
-.menu-list li:first-child{padding-top:0}
-.menu-list h3{font-size:21px;font-weight:600}
-.menu-list p{color:var(--color-on-dark-muted);font-size:15px;margin-top:4px}
+.filters{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:28px;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 92%,transparent)}
+.filters::-webkit-scrollbar{display:none}
+.filter{flex:none;min-height:44px;padding:10px 18px;border-radius:999px;border:1px solid rgba(247,242,239,.25);background:transparent;color:var(--color-on-dark);font:700 15px var(--font-body);cursor:pointer;transition:background-color .2s,color .2s,border-color .2s}
+.filter:hover{border-color:var(--color-red-on-dark)}
+.filter[aria-pressed="true"]{background:var(--color-primary);border-color:var(--color-primary);color:#fff}
+.menu-grid{list-style:none;margin:0;padding:0;display:grid;gap:14px;grid-template-columns:repeat(2,1fr)}
+@media (min-width:700px){.menu-grid{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:1024px){.menu-grid{grid-template-columns:repeat(4,1fr);gap:20px}}
+.menu-grid li[hidden]{display:none}
+.menu-card{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;border-radius:14px;transition:transform .25s var(--ease)}
+.menu-card img{width:100%;height:auto;border-radius:14px;box-shadow:0 14px 30px -12px rgba(0,0,0,.6)}
+.menu-card:hover{transform:translateY(-4px)}
+.lightbox{padding:0;border:0;background:transparent;max-width:100vw;max-height:100vh;width:100vw;height:100vh;overflow:hidden}
+.lightbox::backdrop{background:rgba(10,8,8,.92)}
+.lightbox[open]{display:grid;place-items:center}
+.lightbox img{max-width:min(94vw,760px);max-height:92vh;width:auto;height:auto;border-radius:16px}
+.lb-btn{position:fixed;width:48px;height:48px;border-radius:50%;border:0;display:grid;place-items:center;background:rgba(247,242,239,.14);color:#fff;cursor:pointer;transition:background-color .2s}
+.lb-btn:hover{background:var(--color-primary)}
+.lb-close{top:16px;right:16px}
+.lb-prev{left:12px;top:50%;transform:translateY(-50%)}
+.lb-next{right:12px;top:50%;transform:translateY(-50%)}
+@media (max-width:700px){.lb-prev,.lb-next{top:auto;bottom:20px;transform:none}.lb-prev{left:calc(50% - 60px)}.lb-next{right:calc(50% - 60px)}}
 .menu-note{margin-top:36px;display:flex;flex-wrap:wrap;align-items:center;gap:12px}
 
 /* Events band */
@@ -236,6 +244,10 @@ section{scroll-margin-top:68px}
   <symbol id="i-utensils" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></symbol>
   <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
   <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-cake" viewBox="0 0 24 24"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1M2 21h20M7 8v3M12 8v3M17 8v3M7 4h.01M12 4h.01M17 4h.01"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
   <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
   <symbol id="i-truck" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2M15 18H9M19 18h2a1 1 0 0 0 1-1v-3.6a1 1 0 0 0-.2-.6l-3.5-4.4A1 1 0 0 0 17.5 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol>
   <symbol id="i-baby" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9 12h.01M15 12h.01M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"/></symbol>
@@ -274,20 +286,20 @@ section{scroll-margin-top:68px}
 <main id="main">
   <section class="hero" id="top">
     <picture>
-      <source media="(max-width: 700px)" srcset="img/real-interior.webp">
+      <source media="(max-width: 700px)" srcset="img/dish-antipasti.webp">
       <img src="img/real-exterior.webp" alt="" width="1280" height="960" fetchpriority="high">
     </picture>
     <div class="container hero-content">
       <span class="eyebrow" data-i18n="hero.eyebrow">Кафе-бар · центр Бендер</span>
       <h1 data-i18n-html="hero.title">Кафе-бар <em>Авеню</em></h1>
-      <p class="lead" data-i18n="hero.lead">Европейская, японская и национальная кухня, пицца и суши, коктейли, живая музыка и летняя терраса — на улице Ленина, в самом центре города.</p>
+      <p class="lead" data-i18n="hero.lead">Европейская, японская, грузинская и национальная кухня, пицца и стейки, коктейли и летняя терраса — на улице Ленина, в самом центре города. Уже 18 лет.</p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="tel:+37355278887"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="cta.table">Забронировать столик</span></a>
         <a class="btn btn-ghost" href="#menu"><span data-i18n="cta.menu">Смотреть меню</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
       <div class="chips">
-        <span class="chip"><span class="dot" id="openDot" aria-hidden="true"></span><span id="openText" data-i18n="hours.daily">Ежедневно 10:00 – 00:00</span></span>
-        <span class="chip"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><span data-i18n="hero.reviews">573 отзыва в Google</span></span>
+        <span class="chip"><span class="dot" id="openDot" aria-hidden="true"></span><span id="openText" data-i18n="hours.daily">Ежедневно 11:00 – 00:00</span></span>
+        <span class="chip"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><span data-i18n="hero.reviews">4.4 · 573 отзыва в Google</span></span>
       </div>
     </div>
   </section>
@@ -299,12 +311,12 @@ section{scroll-margin-top:68px}
           <span class="eyebrow" data-i18n="about.eyebrow">О нас</span>
           <div class="section-head">
             <h2 data-i18n="about.title">Любимое место в центре Бендер</h2>
-            <p data-i18n="about.text">«Авеню» — кафе-бар на улице Ленина, куда приходят на бизнес-ланч, встречаются с друзьями за пиццей и суши и отмечают праздники под живую музыку. Два уютных зала, мягкая мебель, приветливый персонал и летняя терраса в тёплое время года.</p>
+            <p data-i18n="about.text">«Авеню» — кафе-бар на улице Ленина, которому уже 18 лет. Сюда приходят на бизнес-ланч, встречаются с друзьями за пиццей, стейком или грузинскими хачапури и отмечают праздники. Два уютных зала, мягкая мебель, приветливый персонал и летняя терраса в тёплое время года.</p>
           </div>
           <div class="stats">
-            <div class="stat"><strong>573</strong><span data-i18n="about.s1">отзыва в Google</span></div>
-            <div class="stat"><strong>4.3</strong><span data-i18n="about.s2">рейтинг на Яндекс</span></div>
-            <div class="stat"><strong>7/7</strong><span data-i18n="about.s3">до полуночи</span></div>
+            <div class="stat"><strong>18</strong><span data-i18n="about.s0">лет с гостями</span></div>
+            <div class="stat"><strong>4.4</strong><span data-i18n="about.s1">рейтинг в Google</span></div>
+            <div class="stat"><strong>573</strong><span data-i18n="about.s2">отзыва в Google</span></div>
           </div>
         </div>
         <div class="about-media reveal">
@@ -314,12 +326,12 @@ section{scroll-margin-top:68px}
       </div>
 
       <div class="features">
-        <article class="feature reveal"><div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-utensils"/></svg></div><h3 data-i18n="f1.t">Три кухни</h3><p data-i18n="f1.d">Европейская, японская и национальная — от пиццы и стейков до суши и роллов.</p></article>
-        <article class="feature reveal"><div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-music"/></svg></div><h3 data-i18n="f2.t">Живая музыка</h3><p data-i18n="f2.d">Музыкальные вечера и тематические вечеринки.</p></article>
-        <article class="feature reveal"><div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-sun"/></svg></div><h3 data-i18n="f3.t">Летняя терраса</h3><p data-i18n="f3.d">Ужин на свежем воздухе в центре города.</p></article>
-        <article class="feature reveal"><div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg></div><h3 data-i18n="f4.t">Бизнес-ланч</h3><p data-i18n="f4.d">Быстрый и сытный обед в будние дни.</p></article>
-        <article class="feature reveal"><div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-truck"/></svg></div><h3 data-i18n="f5.t">Доставка</h3><p data-i18n="f5.d">Привезём любимые блюда по всему городу.</p></article>
-        <article class="feature reveal"><div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-baby"/></svg></div><h3 data-i18n="f6.t">Детское меню</h3><p data-i18n="f6.d">Приходите всей семьёй — для детей есть отдельное меню.</p></article>
+        <article class="feature reveal"><div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-utensils"/></svg></div><h3 data-i18n="f1.t">Большое меню</h3><p data-i18n="f1.d">Европейская, японская, грузинская и национальная кухня — от пиццы и WOK до стейков и гастросетов.</p></article>
+        <article class="feature reveal"><div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg></div><h3 data-i18n="f2.t">Ланчи от 95</h3><p data-i18n="f2.d">Комплексный обед по будням с 12:00 до 17:00: суп, горячее, салат, хлеб и напиток.</p></article>
+        <article class="feature reveal"><div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-truck"/></svg></div><h3 data-i18n="f3.t">Доставка и на вынос</h3><p data-i18n="f3.d">Закажите любимые блюда домой или заберите сами.</p></article>
+        <article class="feature reveal"><div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-cake"/></svg></div><h3 data-i18n="f4.t">Банкеты и торты</h3><p data-i18n="f4.d">Праздничные блюда и торты на заказ — за 2 дня.</p></article>
+        <article class="feature reveal"><div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-baby"/></svg></div><h3 data-i18n="f5.t">Мастер-классы для детей</h3><p data-i18n="f5.d">Дети сами готовят пиццу и роллы — отличная идея для детского праздника.</p></article>
+        <article class="feature reveal"><div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-sun"/></svg></div><h3 data-i18n="f6.t">Терраса и кальяны</h3><p data-i18n="f6.d">Летняя терраса в центре города, кальяны с 16:00.</p></article>
       </div>
     </div>
   </section>
@@ -328,67 +340,61 @@ section{scroll-margin-top:68px}
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow" data-i18n="menu.eyebrow">Меню</span>
-        <h2 data-i18n="menu.title">Что у нас попробовать</h2>
-        <p data-i18n="menu.text">Гости особенно хвалят нашу пиццу и суши. Полное меню и актуальные цены — в кафе или по телефону.</p>
+        <h2 data-i18n="menu.title">Наше меню</h2>
+        <p data-i18n="menu.text">Выберите раздел и нажмите на страницу, чтобы увидеть её крупно. Цены указаны на страницах меню.</p>
       </div>
-
-      <div class="tabs" role="tablist" aria-label="Категории меню" data-i18n-aria="menu.aria">
-        <button class="tab" role="tab" id="t-pizza" aria-controls="p-pizza" aria-selected="true" data-i18n="menu.c1">Пицца</button>
-        <button class="tab" role="tab" id="t-sushi" aria-controls="p-sushi" aria-selected="false" tabindex="-1" data-i18n="menu.c2">Суши и роллы</button>
-        <button class="tab" role="tab" id="t-kitchen" aria-controls="p-kitchen" aria-selected="false" tabindex="-1" data-i18n="menu.c3">Кухня</button>
-        <button class="tab" role="tab" id="t-dessert" aria-controls="p-dessert" aria-selected="false" tabindex="-1" data-i18n="menu.c4">Десерты и кофе</button>
-        <button class="tab" role="tab" id="t-bar" aria-controls="p-bar" aria-selected="false" tabindex="-1" data-i18n="menu.c5">Бар</button>
+      <div class="filters" role="group" aria-label="Разделы меню" data-i18n-aria="menu.aria">
+        <button type="button" class="filter" aria-pressed="true" data-filter="all" data-i18n="menu.all">Всё меню</button>
+        <button type="button" class="filter" aria-pressed="false" data-filter="lanchi" data-i18n="cat.lanchi">Ланчи</button>
+        <button type="button" class="filter" aria-pressed="false" data-filter="zakuski" data-i18n="cat.zakuski">Закуски</button>
+        <button type="button" class="filter" aria-pressed="false" data-filter="salaty" data-i18n="cat.salaty">Салаты</button>
+        <button type="button" class="filter" aria-pressed="false" data-filter="supy" data-i18n="cat.supy">Супы</button>
+        <button type="button" class="filter" aria-pressed="false" data-filter="pasta" data-i18n="cat.pasta">Паста</button>
+        <button type="button" class="filter" aria-pressed="false" data-filter="fish" data-i18n="cat.fish">Рыба и морепродукты</button>
+        <button type="button" class="filter" aria-pressed="false" data-filter="wok" data-i18n="cat.wok">WOK</button>
+        <button type="button" class="filter" aria-pressed="false" data-filter="meat" data-i18n="cat.meat">Курица, свинина, телятина</button>
+        <button type="button" class="filter" aria-pressed="false" data-filter="national" data-i18n="cat.national">Национальные блюда</button>
+        <button type="button" class="filter" aria-pressed="false" data-filter="georgia" data-i18n="cat.georgia">Грузинская кухня</button>
+        <button type="button" class="filter" aria-pressed="false" data-filter="sets" data-i18n="cat.sets">Гастросеты</button>
+        <button type="button" class="filter" aria-pressed="false" data-filter="pizza" data-i18n="cat.pizza">Пицца</button>
+        <button type="button" class="filter" aria-pressed="false" data-filter="burgers" data-i18n="cat.burgers">Бургеры и к пиву</button>
+        <button type="button" class="filter" aria-pressed="false" data-filter="desserts" data-i18n="cat.desserts">Десерты</button>
+        <button type="button" class="filter" aria-pressed="false" data-filter="sides" data-i18n="cat.sides">Гарниры и добавки</button>
+        <button type="button" class="filter" aria-pressed="false" data-filter="preorder" data-i18n="cat.preorder">Предзаказ и торты</button>
       </div>
-
-      <div class="menu-panel" role="tabpanel" id="p-pizza" aria-labelledby="t-pizza">
-        <div class="menu-photo"><img src="img/real-pizza.webp" alt="Пицца в кафе «Авеню»" data-i18n-alt="alt.pizza" width="960" height="1280" loading="lazy"></div>
-        <ul class="menu-list">
-          <li><h3 data-i18n="m.p1">Маргарита</h3><p data-i18n="m.p1d">Томатный соус, моцарелла, базилик</p></li>
-          <li><h3 data-i18n="m.p2">Пепперони</h3><p data-i18n="m.p2d">Острая колбаса пепперони и много сыра</p></li>
-          <li><h3 data-i18n="m.p3">Четыре сыра</h3><p data-i18n="m.p3d">Моцарелла, пармезан, дор блю, сулугуни</p></li>
-          <li><h3 data-i18n="m.p4">Фирменная «Авеню»</h3><p data-i18n="m.p4d">Спросите официанта о фирменной пицце</p></li>
-        </ul>
-      </div>
-      <div class="menu-panel" role="tabpanel" id="p-sushi" aria-labelledby="t-sushi" hidden>
-        <div class="menu-photo"><img src="img/sushi.webp" alt="Суши и роллы" data-i18n-alt="alt.sushi" width="900" height="600" loading="lazy"></div>
-        <ul class="menu-list">
-          <li><h3 data-i18n="m.s1">Филадельфия</h3><p data-i18n="m.s1d">Лосось, сливочный сыр, огурец</p></li>
-          <li><h3 data-i18n="m.s2">Калифорния</h3><p data-i18n="m.s2d">Краб, авокадо, икра тобико</p></li>
-          <li><h3 data-i18n="m.s3">Запечённые роллы</h3><p data-i18n="m.s3d">Под сырной шапкой с соусом</p></li>
-          <li><h3 data-i18n="m.s4">Сеты</h3><p data-i18n="m.s4d">Большие наборы для компании</p></li>
-        </ul>
-      </div>
-      <div class="menu-panel" role="tabpanel" id="p-kitchen" aria-labelledby="t-kitchen" hidden>
-        <div class="menu-photo"><img src="img/steak.webp" alt="Стейк с картофелем" data-i18n-alt="alt.steak" width="900" height="600" loading="lazy"></div>
-        <ul class="menu-list">
-          <li><h3 data-i18n="m.k1">Салаты</h3><p data-i18n="m.k1d">Цезарь, греческий, с лососем и тёплые салаты</p></li>
-          <li><h3 data-i18n="m.k2">Горячие блюда</h3><p data-i18n="m.k2d">Стейки, мясо на гриле, рыба</p></li>
-          <li><h3 data-i18n="m.k3">Паста</h3><p data-i18n="m.k3d">Карбонара, с курицей и грибами</p></li>
-          <li><h3 data-i18n="m.k4">Национальная кухня</h3><p data-i18n="m.k4d">Мамалыга, плачинды и другие домашние блюда</p></li>
-          <li><h3 data-i18n="m.k5">Супы</h3><p data-i18n="m.k5d">Суп дня и классические рецепты</p></li>
-        </ul>
-      </div>
-      <div class="menu-panel" role="tabpanel" id="p-dessert" aria-labelledby="t-dessert" hidden>
-        <div class="menu-photo"><img src="img/cake.webp" alt="Ягодный торт" data-i18n-alt="alt.cake" width="900" height="506" loading="lazy"></div>
-        <ul class="menu-list">
-          <li><h3 data-i18n="m.d1">Десерты</h3><p data-i18n="m.d1d">Чизкейк, торт дня, мороженое</p></li>
-          <li><h3 data-i18n="m.d2">Кофе</h3><p data-i18n="m.d2d">Эспрессо, американо, капучино, латте</p></li>
-          <li><h3 data-i18n="m.d3">Чай</h3><p data-i18n="m.d3d">Чёрный, зелёный, фруктовый, травяной</p></li>
-        </ul>
-      </div>
-      <div class="menu-panel" role="tabpanel" id="p-bar" aria-labelledby="t-bar" hidden>
-        <div class="menu-photo"><img src="img/cocktail.webp" alt="Коктейль" data-i18n-alt="alt.cocktail" width="900" height="601" loading="lazy"></div>
-        <ul class="menu-list">
-          <li><h3 data-i18n="m.b1">Коктейли</h3><p data-i18n="m.b1d">Большой выбор классических и авторских коктейлей</p></li>
-          <li><h3 data-i18n="m.b2">Вино</h3><p data-i18n="m.b2d">Молдавские и приднестровские вина</p></li>
-          <li><h3 data-i18n="m.b3">Пиво и крепкие напитки</h3><p data-i18n="m.b3d">Разливное и бутылочное пиво, виски, коньяк</p></li>
-          <li><h3 data-i18n="m.b4">Лимонады и фреши</h3><p data-i18n="m.b4d">Домашние лимонады и свежевыжатые соки</p></li>
-        </ul>
-      </div>
-
+      <ul class="menu-grid">
+        <li data-cat="lanchi"><button type="button" class="menu-card" data-full="img/menu/lanchi.webp" aria-label="Открыть: Ланчи"><img src="img/menu/thumb/lanchi.webp" alt="Меню: Ланчи" width="490" height="800" loading="lazy"></button></li>
+        <li data-cat="zakuski"><button type="button" class="menu-card" data-full="img/menu/zakuski-1.webp" aria-label="Открыть: Закуски — стр. 1"><img src="img/menu/thumb/zakuski-1.webp" alt="Меню: Закуски — стр. 1" width="520" height="689" loading="lazy"></button></li>
+        <li data-cat="zakuski"><button type="button" class="menu-card" data-full="img/menu/zakuski-2.webp" aria-label="Открыть: Закуски — стр. 2"><img src="img/menu/thumb/zakuski-2.webp" alt="Меню: Закуски — стр. 2" width="520" height="705" loading="lazy"></button></li>
+        <li data-cat="salaty"><button type="button" class="menu-card" data-full="img/menu/salaty-1.webp" aria-label="Открыть: Салаты — стр. 1"><img src="img/menu/thumb/salaty-1.webp" alt="Меню: Салаты — стр. 1" width="520" height="650" loading="lazy"></button></li>
+        <li data-cat="salaty"><button type="button" class="menu-card" data-full="img/menu/salaty-2.webp" aria-label="Открыть: Салаты — стр. 2"><img src="img/menu/thumb/salaty-2.webp" alt="Меню: Салаты — стр. 2" width="520" height="762" loading="lazy"></button></li>
+        <li data-cat="supy"><button type="button" class="menu-card" data-full="img/menu/supy.webp" aria-label="Открыть: Супы"><img src="img/menu/thumb/supy.webp" alt="Меню: Супы" width="520" height="717" loading="lazy"></button></li>
+        <li data-cat="pasta"><button type="button" class="menu-card" data-full="img/menu/pasta.webp" aria-label="Открыть: Паста"><img src="img/menu/thumb/pasta.webp" alt="Меню: Паста" width="520" height="693" loading="lazy"></button></li>
+        <li data-cat="fish"><button type="button" class="menu-card" data-full="img/menu/ryba.webp" aria-label="Открыть: Рыба и морепродукты — стр. 1"><img src="img/menu/thumb/ryba.webp" alt="Меню: Рыба и морепродукты — стр. 1" width="520" height="708" loading="lazy"></button></li>
+        <li data-cat="fish"><button type="button" class="menu-card" data-full="img/menu/moreprodukty.webp" aria-label="Открыть: Рыба и морепродукты — стр. 2"><img src="img/menu/thumb/moreprodukty.webp" alt="Меню: Рыба и морепродукты — стр. 2" width="520" height="705" loading="lazy"></button></li>
+        <li data-cat="wok"><button type="button" class="menu-card" data-full="img/menu/wok.webp" aria-label="Открыть: WOK"><img src="img/menu/thumb/wok.webp" alt="Меню: WOK" width="520" height="684" loading="lazy"></button></li>
+        <li data-cat="meat"><button type="button" class="menu-card" data-full="img/menu/kurica.webp" aria-label="Открыть: Курица, свинина, телятина — стр. 1"><img src="img/menu/thumb/kurica.webp" alt="Меню: Курица, свинина, телятина — стр. 1" width="520" height="696" loading="lazy"></button></li>
+        <li data-cat="meat"><button type="button" class="menu-card" data-full="img/menu/svinina-1.webp" aria-label="Открыть: Курица, свинина, телятина — стр. 2"><img src="img/menu/thumb/svinina-1.webp" alt="Меню: Курица, свинина, телятина — стр. 2" width="520" height="701" loading="lazy"></button></li>
+        <li data-cat="meat"><button type="button" class="menu-card" data-full="img/menu/svinina-2.webp" aria-label="Открыть: Курица, свинина, телятина — стр. 3"><img src="img/menu/thumb/svinina-2.webp" alt="Меню: Курица, свинина, телятина — стр. 3" width="520" height="708" loading="lazy"></button></li>
+        <li data-cat="national"><button type="button" class="menu-card" data-full="img/menu/nacionalnye.webp" aria-label="Открыть: Национальные блюда"><img src="img/menu/thumb/nacionalnye.webp" alt="Меню: Национальные блюда" width="520" height="699" loading="lazy"></button></li>
+        <li data-cat="georgia"><button type="button" class="menu-card" data-full="img/menu/gruzinskie.webp" aria-label="Открыть: Грузинская кухня"><img src="img/menu/thumb/gruzinskie.webp" alt="Меню: Грузинская кухня" width="520" height="726" loading="lazy"></button></li>
+        <li data-cat="sets"><button type="button" class="menu-card" data-full="img/menu/gastrosety-1.webp" aria-label="Открыть: Гастросеты — стр. 1"><img src="img/menu/thumb/gastrosety-1.webp" alt="Меню: Гастросеты — стр. 1" width="520" height="705" loading="lazy"></button></li>
+        <li data-cat="sets"><button type="button" class="menu-card" data-full="img/menu/gastrosety-2.webp" aria-label="Открыть: Гастросеты — стр. 2"><img src="img/menu/thumb/gastrosety-2.webp" alt="Меню: Гастросеты — стр. 2" width="520" height="696" loading="lazy"></button></li>
+        <li data-cat="pizza"><button type="button" class="menu-card" data-full="img/menu/picca-1.webp" aria-label="Открыть: Пицца — стр. 1"><img src="img/menu/thumb/picca-1.webp" alt="Меню: Пицца — стр. 1" width="520" height="694" loading="lazy"></button></li>
+        <li data-cat="pizza"><button type="button" class="menu-card" data-full="img/menu/picca-2.webp" aria-label="Открыть: Пицца — стр. 2"><img src="img/menu/thumb/picca-2.webp" alt="Меню: Пицца — стр. 2" width="520" height="710" loading="lazy"></button></li>
+        <li data-cat="pizza"><button type="button" class="menu-card" data-full="img/menu/picca-3.webp" aria-label="Открыть: Пицца — стр. 3"><img src="img/menu/thumb/picca-3.webp" alt="Меню: Пицца — стр. 3" width="520" height="695" loading="lazy"></button></li>
+        <li data-cat="burgers"><button type="button" class="menu-card" data-full="img/menu/burgery.webp" aria-label="Открыть: Бургеры и к пиву — стр. 1"><img src="img/menu/thumb/burgery.webp" alt="Меню: Бургеры и к пиву — стр. 1" width="520" height="696" loading="lazy"></button></li>
+        <li data-cat="burgers"><button type="button" class="menu-card" data-full="img/menu/k-pivu-1.webp" aria-label="Открыть: Бургеры и к пиву — стр. 2"><img src="img/menu/thumb/k-pivu-1.webp" alt="Меню: Бургеры и к пиву — стр. 2" width="520" height="699" loading="lazy"></button></li>
+        <li data-cat="burgers"><button type="button" class="menu-card" data-full="img/menu/k-pivu-2.webp" aria-label="Открыть: Бургеры и к пиву — стр. 3"><img src="img/menu/thumb/k-pivu-2.webp" alt="Меню: Бургеры и к пиву — стр. 3" width="520" height="712" loading="lazy"></button></li>
+        <li data-cat="desserts"><button type="button" class="menu-card" data-full="img/menu/deserty-1.webp" aria-label="Открыть: Десерты — стр. 1"><img src="img/menu/thumb/deserty-1.webp" alt="Меню: Десерты — стр. 1" width="520" height="730" loading="lazy"></button></li>
+        <li data-cat="desserts"><button type="button" class="menu-card" data-full="img/menu/deserty-2.webp" aria-label="Открыть: Десерты — стр. 2"><img src="img/menu/thumb/deserty-2.webp" alt="Меню: Десерты — стр. 2" width="520" height="675" loading="lazy"></button></li>
+        <li data-cat="sides"><button type="button" class="menu-card" data-full="img/menu/garniry.webp" aria-label="Открыть: Гарниры и добавки — стр. 1"><img src="img/menu/thumb/garniry.webp" alt="Меню: Гарниры и добавки — стр. 1" width="520" height="728" loading="lazy"></button></li>
+        <li data-cat="sides"><button type="button" class="menu-card" data-full="img/menu/dobavki.webp" aria-label="Открыть: Гарниры и добавки — стр. 2"><img src="img/menu/thumb/dobavki.webp" alt="Меню: Гарниры и добавки — стр. 2" width="520" height="720" loading="lazy"></button></li>
+        <li data-cat="preorder"><button type="button" class="menu-card" data-full="img/menu/predzakaz.webp" aria-label="Открыть: Предзаказ и торты"><img src="img/menu/thumb/predzakaz.webp" alt="Меню: Предзаказ и торты" width="512" height="800" loading="lazy"></button></li>
+      </ul>
       <div class="menu-note">
         <a class="btn btn-primary" href="tel:+37355278887"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="cta.order">Заказать доставку</span></a>
-        <a class="btn btn-ghost" href="https://www.instagram.com/avenue_bendery/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-insta"/></svg><span data-i18n="cta.insta">Меню в Instagram</span></a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/avenue_bendery/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-insta"/></svg><span data-i18n="cta.insta">Мы в Instagram</span></a>
       </div>
     </div>
   </section>
@@ -399,12 +405,12 @@ section{scroll-margin-top:68px}
         <img src="img/real-interior.webp" alt="" width="960" height="1280" loading="lazy">
         <span class="eyebrow" data-i18n="ev.eyebrow">Банкеты и праздники</span>
         <h2 data-i18n="ev.title">Отметьте свой праздник в «Авеню»</h2>
-        <p data-i18n="ev.text">Дни рождения, корпоративы, свадьбы и выпускные. Поможем с меню, подготовим зал и сделаем так, чтобы гости запомнили этот вечер.</p>
+        <p data-i18n="ev.text">Дни рождения, корпоративы, свадьбы и выпускные. Поможем с меню, приготовим праздничные блюда и торты на заказ и подготовим зал, чтобы гости запомнили этот вечер.</p>
         <ul>
           <li data-i18n="ev.l1">Дни рождения</li>
           <li data-i18n="ev.l2">Корпоративы</li>
           <li data-i18n="ev.l3">Свадьбы</li>
-          <li data-i18n="ev.l4">Тематические вечеринки</li>
+          <li data-i18n="ev.l4">Детские мастер-классы</li>
         </ul>
         <a class="btn btn-primary" href="tel:+37355278887"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="cta.banquet">Обсудить банкет</span></a>
       </div>
@@ -415,18 +421,18 @@ section{scroll-margin-top:68px}
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow" data-i18n="gal.eyebrow">Галерея</span>
-        <h2 data-i18n="gal.title">Атмосфера «Авеню»</h2>
+        <h2 data-i18n="gal.title">Вкусно — даже на фото</h2>
       </div>
       <div class="gallery reveal">
-        <figure class="tall"><img src="img/real-pizza.webp" alt="Пицца в кафе «Авеню»" data-i18n-alt="alt.pizza" width="960" height="1280" loading="lazy"></figure>
-        <figure><img src="img/sushi.webp" alt="Суши и роллы" data-i18n-alt="alt.sushi" width="900" height="600" loading="lazy"></figure>
-        <figure><img src="img/latte.webp" alt="Латте" data-i18n-alt="alt.latte" width="900" height="600" loading="lazy"></figure>
-        <figure class="tall"><img src="img/real-interior.webp" alt="Зал кафе с красными шторами" data-i18n-alt="alt.interior" width="960" height="1280" loading="lazy"></figure>
+        <figure class="tall"><img src="img/dish-antipasti.webp" alt="Ассорти деликатесов и бокал вина" data-i18n-alt="alt.antipasti" width="693" height="876" loading="lazy"></figure>
+        <figure><img src="img/dish-tiramisu.webp" alt="Тирамису" data-i18n-alt="alt.tiramisu" width="863" height="881" loading="lazy"></figure>
+        <figure><img src="img/real-pizza.webp" alt="Пицца в кафе «Авеню»" data-i18n-alt="alt.pizza" width="960" height="1280" loading="lazy"></figure>
+        <figure class="tall"><img src="img/dish-shrimp.webp" alt="Тигровые креветки гриль с соусом" data-i18n-alt="alt.shrimp" width="626" height="894" loading="lazy"></figure>
         <figure class="wide"><img src="img/real-winter.webp" alt="Кафе «Авеню» зимой" data-i18n-alt="alt.winter" width="1280" height="718" loading="lazy"></figure>
-        <figure><img src="img/salad.webp" alt="Салат с лососем" data-i18n-alt="alt.salad" width="900" height="599" loading="lazy"></figure>
-        <figure><img src="img/cocktail.webp" alt="Коктейль" data-i18n-alt="alt.cocktail" width="900" height="601" loading="lazy"></figure>
-        <figure><img src="img/steak.webp" alt="Стейк с картофелем" data-i18n-alt="alt.steak" width="900" height="600" loading="lazy"></figure>
-        <figure><img src="img/dessert.webp" alt="Десерт с ягодами" data-i18n-alt="alt.dessert" width="900" height="600" loading="lazy"></figure>
+        <figure><img src="img/dish-steak.webp" alt="Стейк на тыквенном пюре" data-i18n-alt="alt.steak" width="680" height="889" loading="lazy"></figure>
+        <figure><img src="img/dish-salad.webp" alt="Салат с куриной печенью и грушей" data-i18n-alt="alt.salad" width="673" height="890" loading="lazy"></figure>
+        <figure><img src="img/dish-trout.webp" alt="Форель с овощами гриль" data-i18n-alt="alt.trout" width="670" height="890" loading="lazy"></figure>
+        <figure><img src="img/real-interior.webp" alt="Зал кафе с красными шторами" data-i18n-alt="alt.interior" width="960" height="1280" loading="lazy"></figure>
       </div>
     </div>
   </section>
@@ -438,7 +444,7 @@ section{scroll-margin-top:68px}
         <h2 data-i18n="rev.title">Что говорят гости</h2>
       </div>
       <div class="ratings reveal">
-        <a class="rating" href="https://search.google.com/local/reviews?placeid=ChIJZ4zDjKEGyUARq2mpXUN-DnI" target="_blank" rel="noopener"><strong>573</strong><span data-i18n="rev.r1">отзыва на Google Картах</span></a>
+        <a class="rating" href="https://search.google.com/local/reviews?placeid=ChIJZ4zDjKEGyUARq2mpXUN-DnI" target="_blank" rel="noopener"><strong>4.4 ★</strong><span data-i18n="rev.r1">573 отзыва на Google Картах</span></a>
         <a class="rating" href="https://yandex.ru/maps/org/avenyu/1679460260/reviews/" target="_blank" rel="noopener"><strong>4.3 ★</strong><span data-i18n="rev.r2">рейтинг на Яндекс Картах</span></a>
         <a class="rating" href="https://www.tripadvisor.com/Restaurant_Review-g777897-d7679461-Reviews-Cafe_Avenue-Bender_Transnistria.html" target="_blank" rel="noopener"><strong>№2</strong><span data-i18n="rev.r3">среди ресторанов Бендер на Tripadvisor</span></a>
       </div>
@@ -484,7 +490,7 @@ section{scroll-margin-top:68px}
           </div>
           <div class="info-row">
             <svg class="icon" aria-hidden="true"><use href="#i-wifi"/></svg>
-            <div><h3 data-i18n="con.extra">Удобства</h3><p data-i18n="con.extrav">Бесплатный Wi-Fi · два зала · летняя терраса</p></div>
+            <div><h3 data-i18n="con.extra">Удобства</h3><p data-i18n="con.extrav">Wi-Fi · два зала · летняя терраса · кальяны</p></div>
           </div>
           <div class="info-row">
             <svg class="icon" aria-hidden="true"><use href="#i-insta"/></svg>
@@ -499,11 +505,18 @@ section{scroll-margin-top:68px}
   </section>
 </main>
 
+<dialog class="lightbox" id="lightbox" aria-label="Страница меню" data-i18n-aria="lb.aria">
+  <img id="lbImg" alt="">
+  <button type="button" class="lb-btn lb-close" id="lbClose" aria-label="Закрыть" data-i18n-aria="lb.close"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+  <button type="button" class="lb-btn lb-prev" id="lbPrev" aria-label="Предыдущая" data-i18n-aria="lb.prev"><svg class="icon" aria-hidden="true"><use href="#i-left"/></svg></button>
+  <button type="button" class="lb-btn lb-next" id="lbNext" aria-label="Следующая" data-i18n-aria="lb.next"><svg class="icon" aria-hidden="true"><use href="#i-right"/></svg></button>
+</dialog>
+
 <footer class="footer">
   <div class="container footer-inner">
     <div>
       <a class="logo" href="#top"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span data-i18n="brand">Авеню</span></a>
-      <p style="margin-top:12px" data-i18n="foot.text">Кафе-бар в Бендерах · ул. Ленина 20А · ежедневно 10:00–00:00</p>
+      <p style="margin-top:12px" data-i18n="foot.text">Кафе-бар в Бендерах · ул. Ленина 20А · ежедневно 11:00–00:00</p>
     </div>
     <div class="social">
       <a href="https://www.instagram.com/avenue_bendery/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-insta"/></svg></a>
@@ -524,55 +537,60 @@ const I18N = {
   ro: {
     "skip":"Salt la conținut","brand":"Avenue","logo.aria":"Avenue — pagina principală","nav.aria":"Meniu principal","menu.aria":"Categorii meniu",
     "nav.about":"Despre noi","nav.menu":"Meniu","nav.events":"Banchete","nav.reviews":"Recenzii","nav.contact":"Contacte",
-    "cta.book":"Rezervă","cta.table":"Rezervă o masă","cta.menu":"Vezi meniul","cta.order":"Comandă livrare","cta.insta":"Meniul pe Instagram","cta.banquet":"Discută un banchet","cta.call":"Sună","cta.route":"Traseu",
+    "cta.book":"Rezervă","cta.table":"Rezervă o masă","cta.menu":"Vezi meniul","cta.order":"Comandă livrare","cta.insta":"Suntem pe Instagram","cta.banquet":"Discută un banchet","cta.call":"Sună","cta.route":"Traseu",
     "hero.eyebrow":"Cafe-bar · centrul Tighinei","hero.title":"Cafe-bar <em>Avenue</em>",
-    "hero.lead":"Bucătărie europeană, japoneză și națională, pizza și sushi, cocktailuri, muzică live și terasă de vară — pe strada Lenin, chiar în centrul orașului.",
-    "hero.reviews":"573 de recenzii pe Google",
-    "hours.daily":"Zilnic 10:00 – 00:00","hours.open":"Deschis acum · până la 00:00","hours.closed":"Închis acum · deschidem la 10:00",
+    "hero.lead":"Bucătărie europeană, japoneză, georgiană și națională, pizza și fripturi, cocktailuri și terasă de vară — pe strada Lenin, chiar în centrul orașului. De 18 ani.",
+    "hero.reviews":"4.4 · 573 de recenzii pe Google",
+    "hours.daily":"Zilnic 11:00 – 00:00","hours.open":"Deschis acum · până la 00:00","hours.closed":"Închis acum · deschidem la 11:00",
     "about.eyebrow":"Despre noi","about.title":"Locul preferat din centrul Tighinei",
-    "about.text":"„Avenue” este un cafe-bar pe strada Lenin, unde vii la prânz de afaceri, te întâlnești cu prietenii la o pizza sau sushi și sărbătorești cu muzică live. Două săli primitoare, mobilier confortabil, personal amabil și terasă de vară în sezonul cald.",
-    "about.s1":"recenzii pe Google","about.s2":"rating pe Yandex","about.s3":"până la miezul nopții",
-    "f1.t":"Trei bucătării","f1.d":"Europeană, japoneză și națională — de la pizza și fripturi la sushi și rulouri.",
-    "f2.t":"Muzică live","f2.d":"Seri muzicale și petreceri tematice.",
-    "f3.t":"Terasă de vară","f3.d":"Cină în aer liber, în centrul orașului.",
-    "f4.t":"Prânz de afaceri","f4.d":"Un prânz rapid și sățios în zilele lucrătoare.",
-    "f5.t":"Livrare","f5.d":"Livrăm preparatele preferate în tot orașul.",
-    "f6.t":"Meniu pentru copii","f6.d":"Veniți cu toată familia — avem meniu separat pentru copii.",
-    "menu.eyebrow":"Meniu","menu.title":"Ce să încerci la noi","menu.text":"Oaspeții laudă în special pizza și sushi. Meniul complet și prețurile actuale — în cafenea sau la telefon.",
-    "menu.c1":"Pizza","menu.c2":"Sushi și rulouri","menu.c3":"Bucătărie","menu.c4":"Deserturi și cafea","menu.c5":"Bar",
-    "m.p1":"Margherita","m.p1d":"Sos de roșii, mozzarella, busuioc",
-    "m.p2":"Pepperoni","m.p2d":"Salam picant pepperoni și mult cașcaval",
-    "m.p3":"Patru brânzeturi","m.p3d":"Mozzarella, parmezan, dor blue, suluguni",
-    "m.p4":"Pizza casei „Avenue”","m.p4d":"Întrebați ospătarul despre pizza casei",
-    "m.s1":"Philadelphia","m.s1d":"Somon, cremă de brânză, castravete",
-    "m.s2":"California","m.s2d":"Crab, avocado, icre tobiko",
-    "m.s3":"Rulouri coapte","m.s3d":"Sub crustă de brânză, cu sos",
-    "m.s4":"Seturi","m.s4d":"Seturi mari pentru companie",
-    "m.k1":"Salate","m.k1d":"Caesar, grecească, cu somon și salate calde",
-    "m.k2":"Feluri principale","m.k2d":"Fripturi, carne la grătar, pește",
-    "m.k3":"Paste","m.k3d":"Carbonara, cu pui și ciuperci",
-    "m.k4":"Bucătărie națională","m.k4d":"Mămăligă, plăcinte și alte preparate de casă",
-    "m.k5":"Supe","m.k5d":"Supa zilei și rețete clasice",
-    "m.d1":"Deserturi","m.d1d":"Cheesecake, tortul zilei, înghețată",
-    "m.d2":"Cafea","m.d2d":"Espresso, americano, cappuccino, latte",
-    "m.d3":"Ceai","m.d3d":"Negru, verde, de fructe, de plante",
-    "m.b1":"Cocktailuri","m.b1d":"Mare varietate de cocktailuri clasice și de autor",
-    "m.b2":"Vin","m.b2d":"Vinuri moldovenești și nistrene",
-    "m.b3":"Bere și băuturi tari","m.b3d":"Bere la halbă și la sticlă, whisky, coniac",
-    "m.b4":"Limonade și fresh-uri","m.b4d":"Limonade de casă și sucuri proaspăt stoarse",
-    "ev.eyebrow":"Banchete și sărbători","ev.title":"Sărbătorește la „Avenue”",
-    "ev.text":"Zile de naștere, petreceri corporative, nunți și absolviri. Te ajutăm cu meniul, pregătim sala și facem ca oaspeții să țină minte această seară.",
-    "ev.l1":"Zile de naștere","ev.l2":"Petreceri corporative","ev.l3":"Nunți","ev.l4":"Petreceri tematice",
-    "gal.eyebrow":"Galerie","gal.title":"Atmosfera „Avenue”",
-    "rev.eyebrow":"Recenzii","rev.title":"Ce spun oaspeții","rev.r1":"recenzii pe Google Maps","rev.r2":"rating pe Yandex Maps","rev.r3":"printre restaurantele din Tighina pe Tripadvisor","rev.src":"Oaspete, Yandex Maps (recenzie în rusă)",
-    "con.title":"Vă așteptăm cu drag","con.addr":"Adresă","con.addrv":"str. Lenin 20A, Tighina","con.phone":"Rezervări și livrare","con.hours":"Program","con.extra":"Facilități","con.extrav":"Wi-Fi gratuit · două săli · terasă de vară","con.map":"Hartă: cafe-bar „Avenue”",
-    "foot.text":"Cafe-bar în Tighina · str. Lenin 20A · zilnic 10:00–00:00",
-    "alt.exterior":"Clădirea cafe-barului „Avenue” pe strada Lenin","alt.logo":"Logo „Avenue”","alt.pizza":"Pizza în cafeneaua „Avenue”","alt.sushi":"Sushi și rulouri","alt.steak":"Friptură cu cartofi","alt.cake":"Tort cu fructe de pădure","alt.cocktail":"Cocktail",
-    "alt.latte":"Latte","alt.interior":"Sala cafenelei cu draperii roșii","alt.winter":"Cafeneaua „Avenue” iarna","alt.salad":"Salată cu somon","alt.dessert":"Desert cu fructe de pădure",
+    "about.text":"„Avenue” este un cafe-bar pe strada Lenin cu o istorie de 18 ani. Aici vii la prânz de afaceri, te întâlnești cu prietenii la o pizza, o friptură sau un hacipuri georgian și sărbătorești. Două săli primitoare, mobilier confortabil, personal amabil și terasă de vară în sezonul cald.",
+    "about.s1":"rating pe Google","about.s2":"recenzii pe Google",
+    "f1.t":"Meniu bogat","f1.d":"Bucătărie europeană, japoneză, georgiană și națională — de la pizza și WOK la fripturi și platouri.",
+    "f2.t":"Prânzuri de la 95","f2.d":"Prânz complex în zilele lucrătoare, 12:00–17:00: supă, fel principal, salată, pâine și băutură.",
+    "f3.t":"Livrare și la pachet","f3.d":"Comandă preparatele preferate acasă sau ridică-le singur.",
+    "f4.t":"Banchete și torturi","f4.d":"Preparate festive și torturi la comandă — cu 2 zile înainte.",
+    "f5.t":"Ateliere pentru copii","f5.d":"Copiii gătesc singuri pizza și rulouri — o idee excelentă pentru o petrecere.",
+    "f6.t":"Terasă și narghilea","f6.d":"Terasă de vară în centrul orașului, narghilea de la ora 16:00.",
+    "menu.eyebrow":"Meniu","menu.title":"Meniul nostru","menu.text":"Alege o categorie și apasă pe pagină ca s-o vezi mare. Prețurile sunt pe paginile meniului.",
+            "ev.eyebrow":"Banchete și sărbători","ev.title":"Sărbătorește la „Avenue”",
+    "ev.text":"Zile de naștere, petreceri corporative, nunți și absolviri. Te ajutăm cu meniul, pregătim preparate festive și torturi la comandă și amenajăm sala, ca oaspeții să țină minte această seară.",
+    "ev.l1":"Zile de naștere","ev.l2":"Petreceri corporative","ev.l3":"Nunți","ev.l4":"Ateliere pentru copii",
+    "gal.eyebrow":"Galerie","gal.title":"Gustos — chiar și în poze",
+    "rev.eyebrow":"Recenzii","rev.title":"Ce spun oaspeții","rev.r1":"573 de recenzii pe Google Maps","rev.r2":"rating pe Yandex Maps","rev.r3":"printre restaurantele din Tighina pe Tripadvisor","rev.src":"Oaspete, Yandex Maps (recenzie în rusă)",
+    "con.title":"Vă așteptăm cu drag","con.addr":"Adresă","con.addrv":"str. Lenin 20A, Tighina","con.phone":"Rezervări și livrare","con.hours":"Program","con.extra":"Facilități","con.extrav":"Wi-Fi · două săli · terasă de vară · narghilea","con.map":"Hartă: cafe-bar „Avenue”",
+    "foot.text":"Cafe-bar în Tighina · str. Lenin 20A · zilnic 11:00–00:00",
+    "alt.exterior":"Clădirea cafe-barului „Avenue” pe strada Lenin","alt.logo":"Logo „Avenue”","alt.pizza":"Pizza în cafeneaua „Avenue”","alt.steak":"Friptură pe piure de dovleac",
+    "alt.interior":"Sala cafenelei cu draperii roșii","alt.winter":"Cafeneaua „Avenue” iarna","alt.salad":"Salată cu ficat de pui și pară",
+    "menu.all":"Tot meniul",
+    "lb.aria":"Pagină de meniu",
+    "lb.close":"Închide",
+    "lb.prev":"Anterioara",
+    "lb.next":"Următoarea",
+    "about.s0":"ani cu oaspeții",
+    "alt.antipasti":"Platou cu delicatese și un pahar de vin",
+    "alt.tiramisu":"Tiramisu",
+    "alt.shrimp":"Creveți tigru la grătar cu sos",
+    "alt.trout":"Păstrăv cu legume la grătar",
+    "cat.lanchi":"Prânzuri",
+    "cat.zakuski":"Gustări",
+    "cat.salaty":"Salate",
+    "cat.supy":"Supe",
+    "cat.pasta":"Paste",
+    "cat.fish":"Pește și fructe de mare",
+    "cat.wok":"WOK",
+    "cat.meat":"Pui, porc, vițel",
+    "cat.national":"Bucătărie națională",
+    "cat.georgia":"Bucătărie georgiană",
+    "cat.sets":"Platouri",
+    "cat.pizza":"Pizza",
+    "cat.burgers":"Burgeri și gustări la bere",
+    "cat.desserts":"Deserturi",
+    "cat.sides":"Garnituri și adaosuri",
+    "cat.preorder":"La comandă și torturi",
     "days":["Luni","Marți","Miercuri","Joi","Vineri","Sâmbătă","Duminică"]
   },
   ru: {
-    "hours.open":"Сейчас открыто · до 00:00","hours.closed":"Сейчас закрыто · откроемся в 10:00",
+    "hours.open":"Сейчас открыто · до 00:00","hours.closed":"Сейчас закрыто · откроемся в 11:00",
     "days":["Понедельник","Вторник","Среда","Четверг","Пятница","Суббота","Воскресенье"]
   }
 };
@@ -597,8 +615,8 @@ function localNow() {
 function renderHours() {
   const t = I18N[lang], {wd, hour} = localNow();
   document.getElementById('hours').innerHTML = t.days.map((d, i) =>
-    `<li${i === wd ? ' class="today"' : ''}><span>${d}</span><span>10:00 – 00:00</span></li>`).join('');
-  const open = hour >= 10;
+    `<li${i === wd ? ' class="today"' : ''}><span>${d}</span><span>11:00 – 00:00</span></li>`).join('');
+  const open = hour >= 11;
   document.getElementById('openDot').classList.toggle('on', open);
   document.getElementById('openText').textContent = open ? t['hours.open'] : t['hours.closed'];
 }
@@ -624,25 +642,41 @@ function setLang(l) {
 document.querySelectorAll('.lang button').forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
 setLang('ru');
 
-// Menu tabs (WAI-ARIA tabs pattern with arrow-key support)
-const tabs = [...document.querySelectorAll('[role="tab"]')];
-function selectTab(tab) {
-  tabs.forEach(t => {
-    const on = t === tab;
-    t.setAttribute('aria-selected', on);
-    t.tabIndex = on ? 0 : -1;
-    document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
-  });
+// Menu section filters
+const filters = [...document.querySelectorAll('.filter')];
+const items = [...document.querySelectorAll('.menu-grid li')];
+filters.forEach(f => f.addEventListener('click', () => {
+  filters.forEach(x => x.setAttribute('aria-pressed', x === f));
+  items.forEach(li => li.hidden = f.dataset.filter !== 'all' && li.dataset.cat !== f.dataset.filter);
+}));
+
+// Lightbox: open a menu page full size, step through the visible pages
+const lb = document.getElementById('lightbox'), lbImg = document.getElementById('lbImg');
+let current = null;
+function visibleCards() { return items.filter(li => !li.hidden).map(li => li.querySelector('.menu-card')); }
+function show(card) {
+  current = card;
+  lbImg.src = card.dataset.full;
+  lbImg.alt = card.querySelector('img').alt;
 }
-tabs.forEach((t, i) => {
-  t.addEventListener('click', () => selectTab(t));
-  t.addEventListener('keydown', e => {
-    const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
-    if (!d) return;
-    const next = tabs[(i + d + tabs.length) % tabs.length];
-    selectTab(next); next.focus();
-  });
-});
+function step(d) {
+  const v = visibleCards(); if (!current) return;
+  show(v[(v.indexOf(current) + d + v.length) % v.length]);
+}
+items.forEach(li => li.querySelector('.menu-card').addEventListener('click', e => { show(e.currentTarget); lb.showModal(); }));
+document.getElementById('lbClose').addEventListener('click', () => lb.close());
+document.getElementById('lbPrev').addEventListener('click', () => step(-1));
+document.getElementById('lbNext').addEventListener('click', () => step(1));
+lb.addEventListener('click', e => { if (e.target === lb) lb.close(); });
+lb.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') step(-1); if (e.key === 'ArrowRight') step(1); });
+lb.addEventListener('close', () => current && current.focus());
+let touchX = null;
+lb.addEventListener('touchstart', e => touchX = e.touches[0].clientX, {passive:true});
+lb.addEventListener('touchend', e => {
+  if (touchX === null) return;
+  const dx = e.changedTouches[0].clientX - touchX; touchX = null;
+  if (Math.abs(dx) > 50) step(dx < 0 ? 1 : -1);
+}, {passive:true});
 
 const header = document.getElementById('header');
 const onScroll = () => header.classList.toggle('scrolled', scrollY > 40);

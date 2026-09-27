@@ -1,40 +1,5 @@
 [
  {
-  "file": "img/cake.webp",
-  "license": "CC0",
-  "source": "https://www.rawpixel.com/image/6040396/berry-cheesecake-free-public-domain-cc0-photo"
- },
- {
-  "file": "img/latte.webp",
-  "license": "CC0",
-  "source": "https://www.rawpixel.com/image/5908079/image-public-domain-art-coffee"
- },
- {
-  "file": "img/salad.webp",
-  "license": "CC0",
-  "source": "https://www.rawpixel.com/image/8752623/photo-image-plant-public-domain-green"
- },
- {
-  "file": "img/steak.webp",
-  "license": "CC0",
-  "source": "https://www.rawpixel.com/image/5921129/free-steak-image-public-domain-food-cc0-photo"
- },
- {
-  "file": "img/cocktail.webp",
-  "license": "CC0",
-  "source": "https://www.rawpixel.com/image/3298753/free-photo-image-cocktail-alcohol-beverage"
- },
- {
-  "file": "img/dessert.webp",
-  "license": "CC0",
-  "source": "https://www.rawpixel.com/image/5926875/photo-image-background-design-public-domain"
- },
- {
-  "file": "img/sushi.webp",
-  "license": "CC0",
-  "source": "https://www.rawpixel.com/image/448024/free-photo-image-sushi-roll-appetite"
- },
- {
   "file": "img/real-pizza.webp",
   "license": "Photo of the cafe from its Yandex Maps listing - confirm usage with the owner",
   "source": "https://yandex.ru/maps/org/avenyu/1679460260/gallery/"
@@ -58,5 +23,40 @@
   "file": "img/real-logo.webp",
   "license": "Photo of the cafe from its Yandex Maps listing - confirm usage with the owner",
   "source": "https://yandex.ru/maps/org/avenyu/1679460260/gallery/"
+ },
+ {
+  "file": "img/dish-antipasti.webp",
+  "license": "Cafe's own photo from Instagram @avenue_bendery, provided by the user",
+  "source": "https://www.instagram.com/avenue_bendery/"
+ },
+ {
+  "file": "img/dish-salad.webp",
+  "license": "Cafe's own photo from Instagram @avenue_bendery, provided by the user",
+  "source": "https://www.instagram.com/avenue_bendery/"
+ },
+ {
+  "file": "img/dish-shrimp.webp",
+  "license": "Cafe's own photo from Instagram @avenue_bendery, provided by the user",
+  "source": "https://www.instagram.com/avenue_bendery/"
+ },
+ {
+  "file": "img/dish-steak.webp",
+  "license": "Cafe's own photo from Instagram @avenue_bendery, provided by the user",
+  "source": "https://www.instagram.com/avenue_bendery/"
+ },
+ {
+  "file": "img/dish-tiramisu.webp",
+  "license": "Cafe's own photo from Instagram @avenue_bendery, provided by the user",
+  "source": "https://www.instagram.com/avenue_bendery/"
+ },
+ {
+  "file": "img/dish-trout.webp",
+  "license": "Cafe's own photo from Instagram @avenue_bendery, provided by the user",
+  "source": "https://www.instagram.com/avenue_bendery/"
+ },
+ {
+  "file": "img/menu/*",
+  "license": "Cafe's own menu pages from Instagram @avenue_bendery highlights, cropped",
+  "source": "https://www.instagram.com/avenue_bendery/"
  }
 ]

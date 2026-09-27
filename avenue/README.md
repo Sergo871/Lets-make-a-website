@@ -9,7 +9,9 @@ Site demo pentru cafe-barul „Авеню” (str. Lenin 20A, Tighina/Bender). O
 - **Tripadvisor:** locul 2 din 9 restaurante din Bender
 - Instagram nu a putut fi citit (cere login).
 
+- **Instagram (capturi trimise de utilizator):** 28 de pagini de meniu cu prețuri (`img/menu/`, decupate fără interfața Instagram) și 6 poze cu preparate (`img/dish-*.webp`); program 11:00–00:00, ланчи L–V 12:00–17:00 de la 95, 18 ani, master-class-uri pentru copii, narghilea de la 16:00.
+
 ## De verificat cu proprietarul înainte de lansare
-- **Meniul** e orientativ (preparate tipice pe categoriile lor reale, fără prețuri). Trebuie înlocuit cu meniul real.
-- **Pozele de mâncare** (sushi, salată, friptură, cocktail, desert, latte, tort) sunt stock CC0; vezi `img/CREDITS.json`. Pozele `real-*` sunt de pe Yandex Maps și trebuie confirmate de proprietar.
+- **Programul:** site-ul folosește 11:00–00:00 din bio-ul Instagram; Google Maps spune 10:00–00:00.
+- Pozele `real-*` sunt de pe Yandex Maps și trebuie confirmate de proprietar.
 - Registrele turistice mai listează telefoanele +373 777 16600 și +373 777 53203 (nefolosite pe site, de confirmat).
